@@ -1,0 +1,560 @@
+
+# MOROSIDAD (CRITERIO SBS) 
+library(xts)
+library(dygraphs)
+
+setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/dataprocesada/Indicadores_Financieros/")
+
+
+################################### 2016  #############################################
+{
+df1 <- list.files(pattern = "en2016.RDS") %>%
+  map_dfr(readRDS)
+
+df2 <- list.files(pattern = "fe2016.RDS") %>%
+  map_dfr(readRDS)
+
+df3 <- list.files(pattern = "ma2016.RDS") %>%
+  map_dfr(readRDS)
+
+df4 <- list.files(pattern = "ab2016.RDS") %>%
+  map_dfr(readRDS)
+
+df5 <- list.files(pattern = "my2016.RDS") %>%
+  map_dfr(readRDS)
+
+df6 <- list.files(pattern = "jn2016.RDS") %>%
+  map_dfr(readRDS)
+
+df7 <- list.files(pattern = "jl2016.RDS") %>%
+  map_dfr(readRDS)
+
+df8 <- list.files(pattern = "ag2016.RDS") %>%
+  map_dfr(readRDS)
+
+df9 <- list.files(pattern = "se2016.RDS") %>%
+  map_dfr(readRDS)
+
+df10 <- list.files(pattern = "oc2016.RDS") %>%
+  map_dfr(readRDS)
+
+df11 <- list.files(pattern = "no2016.RDS") %>%
+  map_dfr(readRDS)
+
+df12 <- list.files(pattern = "di2016.RDS") %>%
+  map_dfr(readRDS)
+}
+
+{
+bd<-df1 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd1<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df2 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd2<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df3 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd3<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df4 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd4<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df5 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd5<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df6 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd6<-xts(bd[,-1],as.Date(bd$Periodo))
+
+fila<-df6[14,]
+
+names(fila)<-names(df7)
+fila$Periodo<-as.Date("2016-07-31")
+df7<-rbind(df7,fila)
+bd<-df7 %>%
+select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd7<-xts(bd[,-1],as.Date(bd$Periodo))
+
+names(fila)<-names(df8)
+fila$Periodo<-as.Date("2016-08-31")
+df8<-rbind(df8,fila)
+bd<-df8 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd8<-xts(bd[,-1],as.Date(bd$Periodo))
+
+names(fila)<-names(df9)
+fila$Periodo<-as.Date("2016-09-30")
+df9<-rbind(df9,fila)
+bd<-df9 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd9<-xts(bd[,-1],as.Date(bd$Periodo))
+
+names(fila)<-names(df10)
+fila$Periodo<-as.Date("2016-10-31")
+df10<-rbind(df10,fila)
+bd<-df10 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd10<-xts(bd[,-1],as.Date(bd$Periodo))
+
+names(fila)<-names(df11)
+fila$Periodo<-as.Date("2016-11-30")
+df11<-rbind(df11,fila)
+bd<-df11 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd11<-xts(bd[,-1],as.Date(bd$Periodo))
+
+names(fila)<-names(df12)
+fila$Periodo<-as.Date("2016-12-31")
+df12<-rbind(df12,fila)
+bd<-df12 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd12<-xts(bd[,-1],as.Date(bd$Periodo))
+}
+
+bd<-c(bd1,bd2,bd3,bd4,bd5,bd6,bd7,bd8,bd9,bd10,bd11,bd12)
+mor_2016<-rbind.xts(bd)
+
+
+saveRDS(mor_2016,file="mor_2016.RDS")
+
+################################### 2017  #############################################
+{
+df1 <- list.files(pattern = "en2017.RDS") %>%
+  map_dfr(readRDS)
+
+df2 <- list.files(pattern = "fe2017.RDS") %>%
+  map_dfr(readRDS)
+
+df3 <- list.files(pattern = "ma2017.RDS") %>%
+  map_dfr(readRDS)
+
+df4 <- list.files(pattern = "ab2017.RDS") %>%
+  map_dfr(readRDS)
+
+df5 <- list.files(pattern = "my2017.RDS") %>%
+  map_dfr(readRDS)
+
+df6 <- list.files(pattern = "jn2017.RDS") %>%
+  map_dfr(readRDS)
+
+df7 <- list.files(pattern = "jl2017.RDS") %>%
+  map_dfr(readRDS)
+
+df8 <- list.files(pattern = "ag2017.RDS") %>%
+  map_dfr(readRDS)
+
+df9 <- list.files(pattern = "se2017.RDS") %>%
+  map_dfr(readRDS)
+
+df10 <- list.files(pattern = "oc2017.RDS") %>%
+  map_dfr(readRDS)
+
+df11 <- list.files(pattern = "no2017.RDS") %>%
+  map_dfr(readRDS)
+
+df12 <- list.files(pattern = "di2017.RDS") %>%
+  map_dfr(readRDS)
+}
+
+{
+bd<-df1 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd1<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df2 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd2<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df3 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd3<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df4 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd4<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df5 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd5<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df6 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd6<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df7 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd7<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df8 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd8<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df9 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd9<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df10 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd10<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df11 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd11<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df12 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd12<-xts(bd[,-1],as.Date(bd$Periodo))
+}
+
+bd<-c(bd1,bd2,bd3,bd4,bd5,bd6,bd7,bd8,bd9,bd10,bd11,bd12)
+mor_2017<-rbind.xts(bd)
+
+saveRDS(mor_2017,file="mor_2017.RDS")
+
+################################### 2018  #############################################
+
+{
+df1 <- list.files(pattern = "en2018.RDS") %>%
+  map_dfr(readRDS)
+
+df2 <- list.files(pattern = "fe2018.RDS") %>%
+  map_dfr(readRDS)
+
+df3 <- list.files(pattern = "ma2018.RDS") %>%
+  map_dfr(readRDS)
+
+df4 <- list.files(pattern = "ab2018.RDS") %>%
+  map_dfr(readRDS)
+
+df5 <- list.files(pattern = "my2018.RDS") %>%
+  map_dfr(readRDS)
+
+df6 <- list.files(pattern = "jn2018.RDS") %>%
+  map_dfr(readRDS)
+
+df7 <- list.files(pattern = "jl2018.RDS") %>%
+  map_dfr(readRDS)
+
+df8 <- list.files(pattern = "ag2018.RDS") %>%
+  map_dfr(readRDS)
+
+df9 <- list.files(pattern = "se2018.RDS") %>%
+  map_dfr(readRDS)
+
+df10 <- list.files(pattern = "oc2018.RDS") %>%
+  map_dfr(readRDS)
+
+df11 <- list.files(pattern = "no2018.RDS") %>%
+  map_dfr(readRDS)
+
+df12 <- list.files(pattern = "di2018.RDS") %>%
+  map_dfr(readRDS)
+}
+
+{
+bd<-df1 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd1<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df2 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd2<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df3 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd3<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df4 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd4<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df5 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd5<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df6 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd6<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df7 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd7<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df8 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd8<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df9 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd9<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df10 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd10<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df11 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd11<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df12 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd12<-xts(bd[,-1],as.Date(bd$Periodo))
+}
+
+bd<-c(bd1,bd2,bd3,bd4,bd5,bd6,bd7,bd8,bd9,bd10,bd11,bd12)
+mor_2018<-rbind.xts(bd)
+
+saveRDS(mor_2018,file="mor_2018.RDS")
+
+################################### 2019  #############################################
+
+{
+df1 <- list.files(pattern = "en2019.RDS") %>%
+  map_dfr(readRDS)
+
+df2 <- list.files(pattern = "fe2019.RDS") %>%
+  map_dfr(readRDS)
+
+df3 <- list.files(pattern = "ma2019.RDS") %>%
+  map_dfr(readRDS)
+
+df4 <- list.files(pattern = "ab2019.RDS") %>%
+  map_dfr(readRDS)
+
+df5 <- list.files(pattern = "my2019.RDS") %>%
+  map_dfr(readRDS)
+
+df6 <- list.files(pattern = "jn2019.RDS") %>%
+  map_dfr(readRDS)
+
+df7 <- list.files(pattern = "jl2019.RDS") %>%
+  map_dfr(readRDS)
+
+df8 <- list.files(pattern = "ag2019.RDS") %>%
+  map_dfr(readRDS)
+
+df9 <- list.files(pattern = "se2019.RDS") %>%
+  map_dfr(readRDS)
+
+df10 <- list.files(pattern = "oc2019.RDS") %>%
+  map_dfr(readRDS)
+
+df11 <- list.files(pattern = "no2019.RDS") %>%
+  map_dfr(readRDS)
+
+df12 <- list.files(pattern = "di2019.RDS") %>%
+  map_dfr(readRDS)
+}
+
+{
+bd<-df1 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd1<-xts(bd[,-1],as.Date(bd$Periodo))
+
+bd<-df2 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd2<-xts(bd[,-1],as.Date(bd$Periodo))
+
+fila<-NULL
+fila<-df2[2,]
+
+names(fila)<-names(df3)
+fila$Periodo<-as.Date("2019-03-31")
+df3<-rbind(df3,fila)
+bd<-df3 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd3<-xts(bd[,-1],as.Date(bd$Periodo))
+
+names(fila)<-names(df4)
+fila$Periodo<-as.Date("2019-04-30")
+df4<-rbind(df4,fila)
+bd<-df4 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd4<-xts(bd[,-1],as.Date(bd$Periodo))
+
+names(fila)<-names(df5)
+fila$Periodo<-as.Date("2019-05-31")
+df5<-rbind(df5,fila)
+bd<-df5 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd5<-xts(bd[,-1],as.Date(bd$Periodo))
+
+names(fila)<-names(df6)
+fila$Periodo<-as.Date("2019-06-30")
+df6<-rbind(df6,fila)
+bd<-df6 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd6<-xts(bd[,-1],as.Date(bd$Periodo))
+
+names(fila)<-names(df7)
+fila$Periodo<-as.Date("2019-07-31")
+df7<-rbind(df7,fila)
+bd<-df7 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd7<-xts(bd[,-1],as.Date(bd$Periodo))
+
+names(fila)<-names(df8)
+fila$Periodo<-as.Date("2019-08-31")
+df8<-rbind(df8,fila)
+bd<-df8 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd8<-xts(bd[,-1],as.Date(bd$Periodo))
+
+names(fila)<-names(df9)
+fila$Periodo<-as.Date("2019-09-30")
+df9<-rbind(df9,fila)
+bd<-df9 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd9<-xts(bd[,-1],as.Date(bd$Periodo))
+
+names(fila)<-names(df10)
+fila$Periodo<-as.Date("2019-10-31")
+df10<-rbind(df10,fila)
+bd<-df10 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd10<-xts(bd[,-1],as.Date(bd$Periodo))
+
+names(fila)<-names(df11)
+fila$Periodo<-as.Date("2019-11-30")
+df11<-rbind(df11,fila)
+bd<-df11 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd11<-xts(bd[,-1],as.Date(bd$Periodo))
+
+names(fila)<-names(df12)
+fila$Periodo<-as.Date("2019-12-31")
+df12<-rbind(df12,fila)
+bd<-df12 %>%
+  select(Periodo,Bancos,fn)
+bd<-bd %>% spread(key = Bancos,value = fn)
+bd12<-xts(bd[,-1],as.Date(bd$Periodo))
+}
+
+bd<-rbind(bd1,bd2,bd3,bd4,bd5,bd6,bd7,bd8,bd9,bd10,bd11,bd12)
+mor_2019<-rbind.xts(bd)
+
+saveRDS(mor_2019,file="mor_2019.RDS")
+
+################################### 2020  #############################################
+
+{
+  df1 <- list.files(pattern = "en2020.RDS") %>%
+    map_dfr(readRDS)
+  
+  df2 <- list.files(pattern = "fe2020.RDS") %>%
+    map_dfr(readRDS)
+  
+  df3 <- list.files(pattern = "ma2020.RDS") %>%
+    map_dfr(readRDS)
+  
+  df4 <- list.files(pattern = "ab2020.RDS") %>%
+    map_dfr(readRDS)
+  
+  df5 <- list.files(pattern = "my2020.RDS") %>%
+    map_dfr(readRDS)
+  
+  df6 <- list.files(pattern = "jn2020.RDS") %>%
+    map_dfr(readRDS)
+  
+  df7 <- list.files(pattern = "jl2020.RDS") %>%
+    map_dfr(readRDS)
+}
+
+{
+  bd<-df1 %>%
+    select(Periodo,Bancos,fn)
+  bd<-bd %>% spread(key = Bancos,value = fn)
+  bd1<-xts(bd[,-1],as.Date(bd$Periodo))
+  
+  bd<-df2 %>%
+    select(Periodo,Bancos,fn)
+  bd<-bd %>% spread(key = Bancos,value = fn)
+  bd2<-xts(bd[,-1],as.Date(bd$Periodo))
+  
+  
+  bd<-df3 %>%
+    select(Periodo,Bancos,fn)
+  bd<-bd %>% spread(key = Bancos,value = fn)
+  bd3<-xts(bd[,-1],as.Date(bd$Periodo))
+  
+  bd<-df4 %>%
+    select(Periodo,Bancos,fn)
+  bd<-bd %>% spread(key = Bancos,value = fn)
+  bd4<-xts(bd[,-1],as.Date(bd$Periodo))
+  
+  bd<-df5 %>%
+    select(Periodo,Bancos,fn)
+  bd<-bd %>% spread(key = Bancos,value = fn)
+  bd5<-xts(bd[,-1],as.Date(bd$Periodo))
+  
+  
+  bd<-df6 %>%
+    select(Periodo,Bancos,fn)
+  bd<-bd %>% spread(key = Bancos,value = fn)
+  bd6<-xts(bd[,-1],as.Date(bd$Periodo))
+  
+
+  bd<-df7 %>%
+    select(Periodo,Bancos,fn)
+  bd<-bd %>% spread(key = Bancos,value = fn)
+  bd7<-xts(bd[,-1],as.Date(bd$Periodo))
+  
+  
+}
+
+bd<-rbind(bd1,bd2,bd3,bd4,bd5,bd6)
+mor_2020<-rbind.xts(bd)
+
+saveRDS(mor_2020,file="mor_2020.RDS")
+

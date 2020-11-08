@@ -1,0 +1,70 @@
+---
+title: "Reporte Sector Bancario"
+author: "Jóse Conde"
+date: "8/11/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Indice de Morosidad en Moneda Nacional
+
+Evolución de la Morosidad Mensual por año
+
+## Año 2016
+
+```{r SBS1, echo=T,comment=F,warning=FALSE,message=FALSE}
+library(tidyverse)
+library(dygraphs)
+
+setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/dataprocesada/Indicadores_Financieros/")
+mor_2016<-readRDS("mor_2016.RDS")
+dygraph(mor_2016)
+```
+
+## Año 2017
+
+```{r SBS2, echo=T,comment=F,warning=FALSE,message=FALSE}
+library(tidyverse)
+library(dygraphs)
+
+setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/dataprocesada/Indicadores_Financieros/")
+mor_2017<-readRDS("mor_2017.RDS")
+dygraph(mor_2017)
+```
+
+
+## Año 2018
+
+```{r SBS3, echo=T,comment=F,warning=FALSE,message=FALSE}
+library(tidyverse)
+library(dygraphs)
+
+setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/dataprocesada/Indicadores_Financieros/")
+mor_2018<-readRDS("mor_2018.RDS")
+dygraph(mor_2018)
+```
+
+## Año 2019
+
+```{r SBS4, echo=T,comment=F,warning=FALSE,message=FALSE}
+library(tidyverse)
+library(dygraphs)
+
+setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/dataprocesada/Indicadores_Financieros/")
+mor_2019<-readRDS("mor_2019.RDS")
+dygraph(mor_2019)
+```
+
+## Año 2020
+
+```{r SBS5, echo=T,comment=F,warning=FALSE,message=FALSE}
+library(tidyverse)
+library(dygraphs)
+
+setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/dataprocesada/Indicadores_Financieros/")
+mor_2020<-readRDS("mor_2020.RDS")
+dygraph(mor_2020)
+```
