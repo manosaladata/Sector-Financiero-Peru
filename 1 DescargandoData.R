@@ -1,24 +1,25 @@
 ## DECARGANDO DATA ##
 
 # DESCARGANDO INDICADORES FINANCIEROS
-mainDir <- "C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion"
+mainDir <- "C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru"
+setwd(mainDir)
 subDir1 <- "data"
 subDir2 <- "raw data"
 dir.create(file.path(mainDir, subDir1), showWarnings = T)
 dir.create(file.path(subDir1, subDir2), showWarnings = T)
 
-mainDir <- "C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data"
+
+mainDir <- "C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data"
 setwd(mainDir)
 dir.create('./dataprocesada/Indicadores_Financieros')
 
 
-
-mainDir <- "C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/raw data"
+mainDir <- "C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data"
 setwd(mainDir)
 dir.create('./Indicadores_Financieros')
 
 # CREANDO CARPETAS 2016 al 2020 PARA EL raw data
-mainDir <- "C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/raw data/Indicadores_Financieros"
+mainDir <- "C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Indicadores_Financieros"
 
 subfolder_names <- as.character(c(2016:2020)) 
 for (j in 1:length(subfolder_names)){
@@ -26,7 +27,7 @@ for (j in 1:length(subfolder_names)){
 }
 
 # CREANDO CARPETAS 2016 al 2020 PARA LA data procesada
-mainDir <- "C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/dataprocesada/Indicadores_Financieros"
+mainDir <- "C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Indicadores_Financieros"
 
 subfolder_names <- as.character(c(2016:2020)) 
 for (j in 1:length(subfolder_names)){
@@ -41,7 +42,7 @@ for (j in 1:length(subfolder_names)){
 ##############################################      #########################################################
 
 
-setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/raw data/Indicadores_Financieros/2016") 
+setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Indicadores_Financieros/2016") 
 data_2016<- readLines(n=12)
 https://intranet2.sbs.gob.pe/estadistica/financiera/2016/Diciembre/B-2401-di2016.XLS
 https://intranet2.sbs.gob.pe/estadistica/financiera/2016/Noviembre/B-2401-no2016.XLS
@@ -78,7 +79,7 @@ print("El archivo esta descargado")
 ##############################################      #########################################################
 
 
-setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/raw data/Indicadores_Financieros/2017") 
+setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Indicadores_Financieros/2017") 
 
 data_2017<- readLines(n=12)
 https://intranet2.sbs.gob.pe/estadistica/financiera/2017/Diciembre/B-2401-di2017.XLS
@@ -111,7 +112,7 @@ for (i in data_2017)
 ############################################## 2018 #########################################################
 ##############################################      #########################################################
 ##############################################      #########################################################
-setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/raw data/Indicadores_Financieros/2018") 
+setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Indicadores_Financieros/2018") 
 
 data_2018<- readLines(n=12)
 https://intranet2.sbs.gob.pe/estadistica/financiera/2018/Diciembre/B-2401-di2018.XLS
@@ -145,7 +146,7 @@ https://intranet2.sbs.gob.pe/estadistica/financiera/2018/Enero/B-2401-en2018.XLS
 ############################################## 2019 #########################################################
 ##############################################      #########################################################
 ##############################################      #########################################################
-setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/raw data/Indicadores_Financieros/2019") 
+setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Indicadores_Financieros/2019") 
 
 data_2019<- readLines(n=12)
 https://intranet2.sbs.gob.pe/estadistica/financiera/2019/Diciembre/B-2401-di2019.XLS
@@ -178,9 +179,13 @@ destfile
 ############################################## 2020 #########################################################
 ##############################################      #########################################################
 ##############################################      #########################################################
-setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/raw data/Indicadores_Financieros/2020") 
+setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Indicadores_Financieros/2020") 
 
-data_2020<- readLines(n=8)
+data_2020<- readLines(n=12)
+https://intranet2.sbs.gob.pe/estadistica/financiera/2020/Diciembre/B-2401-di2020.XLS
+https://intranet2.sbs.gob.pe/estadistica/financiera/2020/Noviembre/B-2401-no2020.XLS
+https://intranet2.sbs.gob.pe/estadistica/financiera/2020/Octubre/B-2401-oc2020.XLS
+https://intranet2.sbs.gob.pe/estadistica/financiera/2020/Setiembre/B-2401-se2020.XLS
 https://intranet2.sbs.gob.pe/estadistica/financiera/2020/Agosto/B-2401-ag2020.XLS
 https://intranet2.sbs.gob.pe/estadistica/financiera/2020/Julio/B-2401-jl2020.XLS
 https://intranet2.sbs.gob.pe/estadistica/financiera/2020/Junio/B-2401-jn2020.XLS

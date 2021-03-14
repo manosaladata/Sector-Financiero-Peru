@@ -9,7 +9,7 @@ imp.data.xlsx<-function(mes, anio, pestania, dia, skips){
   
   archivo <- paste("B-2401-",mes,anio,".xls",sep="")
   
-  a<-readxl::read_xlsx(path=archivo, sheet=pestania, skip=skips)
+  a<-read_xlsx(path=archivo, sheet=pestania, skip=skips)
   a<-a[,-10]
   a<-a[!is.na(a[,2]),]
   b<-a[1,-1]
@@ -39,7 +39,7 @@ imp.data.xls<-function(mes, anio, pestania, dia, skips){
   
   archivo = paste("B-2401-",mes,anio,".xls",sep="")
   
-  a<-readxl::read_xls(path=archivo, sheet=pestania, skip=skips)
+  a<-read_xls(path=archivo, sheet=pestania, skip=skips)
   a<-a[,-10]
   a<-a[!is.na(a[,2]),]
   b<-a[1,-1]
@@ -64,8 +64,182 @@ imp.data.xls<-function(mes, anio, pestania, dia, skips){
 }
 
 
+#AÑO 2010
+{
+setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Indicadores_Financieros/2010")
+
+en2010<-imp.data.xls(dia = "31",mes = "en",anio="2010", pestania = 1, skips = 0)
+fe2010<-imp.data.xls(dia = "29",mes = "fe",anio="2010", pestania = 1, skips = 0)
+ma2010<-imp.data.xls(dia = "31",mes = "ma",anio="2010", pestania = 1, skips = 0)
+ab2010<-imp.data.xls(dia = "30",mes = "ab",anio="2010", pestania = 1, skips = 0)
+my2010<-imp.data.xls(dia = "31",mes = "my",anio="2010", pestania = 1, skips = 0)
+jn2010<-imp.data.xls(dia = "30",mes = "jn",anio="2010", pestania = 1, skips = 0)
+jl2010<-imp.data.xls(dia = "31",mes = "jl",anio="2010", pestania = 1, skips = 0)
+ag2010<-imp.data.xls(dia = "31",mes = "ag",anio="2010", pestania = 1, skips = 0)
+se2010<-imp.data.xls(dia = "30",mes = "se",anio="2010", pestania = 1, skips = 0)
+oc2010<-imp.data.xls(dia = "31",mes = "oc",anio="2010", pestania = 1, skips = 0)
+no2010<-imp.data.xls(dia = "30",mes = "no",anio="2010", pestania = 1, skips = 0)
+di2010<-imp.data.xlsx(dia = "31",mes = "di",anio="2010", pestania = 1, skips = 0)
+
+en2010$Bancos
+(fe2010$Bancos)
+(ma2010$Bancos)
+(ab2010$Bancos)
+(my2010$Bancos)
+(jn2010$Bancos)
+(jl2010$Bancos)
+(ag2010$Bancos)
+(se2010$Bancos)
+(oc2010$Bancos)
+(no2010$Bancos)
+(di2010$Bancos)
+
+id1<-c("Azteca","Cencosud","BBVA","Comercio","BCP","Falabella","Pichincha",
+       "GNB","ICBC","BANBIF","Ripley","Santander","Citibank", "Deutsche", 
+       "Interbank","Mibanco","Scotiabank","Total Banca")
+id2<-c("Azteca","Cencosud","BBVA","Comercio","BCP","Falabella","Pichincha",
+       "GNB","ICBC","BANBIF","Ripley","Santander","Citibank", 
+       "Interbank","Mibanco","Scotiabank","Total Banca")
+
+
+en2016[,1]<-id1
+fe2016[,1]<-id1
+ma2016[,1]<-id1
+ab2016[,1]<-id1
+my2016[,1]<-id1
+jn2016[,1]<-id1
+
+jl2016[,1]<-id2
+ag2016[,1]<-id2
+se2016[,1]<-id2
+oc2016[,1]<-id2
+no2016[,1]<-id2
+di2016[,1]<-id2
+
+
+
+View(en2016)
+View(fe2016)
+View(ma2016)
+View(ab2016)
+View(my2016)
+View(jn2016)
+View(jl2016)
+View(ag2016)
+View(se2016)
+View(oc2016)
+View(no2016)
+View(di2016)
+
+
+#Guardando la data
+setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/dataprocesada/Indicadores_Financieros/2016/")
+
+saveRDS(en2016,file="en2016.RDS")
+saveRDS(fe2016,file="fe2016.RDS")
+saveRDS(ma2016,file="ma2016.RDS")
+saveRDS(ab2016,file="ab2016.RDS")
+saveRDS(my2016,file="my2016.RDS")
+saveRDS(jn2016,file="jn2016.RDS")
+saveRDS(jl2016,file="jl2016.RDS")
+saveRDS(ag2016,file="ag2016.RDS")
+saveRDS(se2016,file="se2016.RDS")
+saveRDS(oc2016,file="oc2016.RDS")
+saveRDS(no2016,file="no2016.RDS")
+saveRDS(di2016,file="di2016.RDS")
+
+}
+
+rlang::last_error()
+#AÑO 2015
+{
+  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Indicadores_Financieros/2015")
+  
+  en2015<-imp.data.xlsx(dia = "31",mes = "en",anio="2015", pestania = 1, skips = 0)
+  fe2015<-imp.data.xls(dia = "29",mes = "fe",anio="2015", pestania = 1, skips = 0)
+  ma2015<-imp.data.xls(dia = "31",mes = "ma",anio="2015", pestania = 1, skips = 0)
+  ab2015<-imp.data.xls(dia = "30",mes = "ab",anio="2015", pestania = 1, skips = 0)
+  my2015<-imp.data.xls(dia = "31",mes = "my",anio="2015", pestania = 1, skips = 0)
+  jn2015<-imp.data.xls(dia = "30",mes = "jn",anio="2015", pestania = 1, skips = 0)
+  jl2015<-imp.data.xls(dia = "31",mes = "jl",anio="2015", pestania = 1, skips = 0)
+  ag2015<-imp.data.xls(dia = "31",mes = "ag",anio="2015", pestania = 1, skips = 0)
+  se2015<-imp.data.xls(dia = "30",mes = "se",anio="2015", pestania = 1, skips = 0)
+  oc2015<-imp.data.xls(dia = "31",mes = "oc",anio="2015", pestania = 1, skips = 0)
+  no2015<-imp.data.xls(dia = "30",mes = "no",anio="2015", pestania = 1, skips = 0)
+  di2015<-imp.data.xlsx(dia = "31",mes = "di",anio="2015", pestania = 1, skips = 0)
+  
+  en2010$Bancos
+  (fe2010$Bancos)
+  (ma2010$Bancos)
+  (ab2010$Bancos)
+  (my2010$Bancos)
+  (jn2010$Bancos)
+  (jl2010$Bancos)
+  (ag2010$Bancos)
+  (se2010$Bancos)
+  (oc2010$Bancos)
+  (no2010$Bancos)
+  (di2010$Bancos)
+  
+  id1<-c("Azteca","Cencosud","BBVA","Comercio","BCP","Falabella","Pichincha",
+         "GNB","ICBC","BANBIF","Ripley","Santander","Citibank", "Deutsche", 
+         "Interbank","Mibanco","Scotiabank","Total Banca")
+  id2<-c("Azteca","Cencosud","BBVA","Comercio","BCP","Falabella","Pichincha",
+         "GNB","ICBC","BANBIF","Ripley","Santander","Citibank", 
+         "Interbank","Mibanco","Scotiabank","Total Banca")
+  
+  
+  en2016[,1]<-id1
+  fe2016[,1]<-id1
+  ma2016[,1]<-id1
+  ab2016[,1]<-id1
+  my2016[,1]<-id1
+  jn2016[,1]<-id1
+  
+  jl2016[,1]<-id2
+  ag2016[,1]<-id2
+  se2016[,1]<-id2
+  oc2016[,1]<-id2
+  no2016[,1]<-id2
+  di2016[,1]<-id2
+  
+  
+  
+  View(en2016)
+  View(fe2016)
+  View(ma2016)
+  View(ab2016)
+  View(my2016)
+  View(jn2016)
+  View(jl2016)
+  View(ag2016)
+  View(se2016)
+  View(oc2016)
+  View(no2016)
+  View(di2016)
+  
+  
+  #Guardando la data
+  setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/dataprocesada/Indicadores_Financieros/2016/")
+  
+  saveRDS(en2016,file="en2016.RDS")
+  saveRDS(fe2016,file="fe2016.RDS")
+  saveRDS(ma2016,file="ma2016.RDS")
+  saveRDS(ab2016,file="ab2016.RDS")
+  saveRDS(my2016,file="my2016.RDS")
+  saveRDS(jn2016,file="jn2016.RDS")
+  saveRDS(jl2016,file="jl2016.RDS")
+  saveRDS(ag2016,file="ag2016.RDS")
+  saveRDS(se2016,file="se2016.RDS")
+  saveRDS(oc2016,file="oc2016.RDS")
+  saveRDS(no2016,file="no2016.RDS")
+  saveRDS(di2016,file="di2016.RDS")
+  
+}
+
+
 #AÑO 2016
-setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/raw data/Indicadores_Financieros/2016")
+setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Indicadores_Financieros/2016")
 
 en2016<-imp.data.xls(dia = "31",mes = "en",anio="2016", pestania = 1, skips = 0)
 fe2016<-imp.data.xls(dia = "29",mes = "fe",anio="2016", pestania = 1, skips = 0)
@@ -151,7 +325,7 @@ saveRDS(di2016,file="di2016.RDS")
 
 
 #AÑO 2017
-setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/raw data/Indicadores_Financieros/2017")
+setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Indicadores_Financieros/2017")
 
 en2017<-imp.data.xls(dia = "31",mes = "en",anio="2017", pestania = 1, skips = 0)
 fe2017<-imp.data.xlsx(dia = "28",mes = "fe",anio="2017", pestania = 1, skips = 0)
@@ -233,7 +407,7 @@ saveRDS(di2017,file="di2017.RDS")
 
 
 #AÑO 2018
-setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/raw data/Indicadores_Financieros/2018")
+setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Indicadores_Financieros/2018")
 
 en2018<-imp.data.xlsx(dia = "31",mes = "en",anio="2018", pestania = 1, skips = 0)
 fe2018<-imp.data.xlsx(dia = "28",mes = "fe",anio="2018", pestania = 1, skips = 0)
@@ -318,7 +492,7 @@ saveRDS(no2018,file="no2018.RDS")
 saveRDS(di2018,file="di2018.RDS")
 
 #AÑO 2019
-setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/raw data/Indicadores_Financieros/2019/")
+setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Indicadores_Financieros/2019/")
 
 en2019<-imp.data.xlsx(dia = "31",mes = "en",anio="2019", pestania = 1, skips = 0)
 fe2019<-imp.data.xlsx(dia = "28",mes = "fe",anio="2019", pestania = 1, skips = 0)
@@ -403,17 +577,21 @@ saveRDS(oc2019,file="oc2019.RDS")
 saveRDS(no2019,file="no2019.RDS")
 saveRDS(di2019,file="di2019.RDS")
 
-#AÑO 2020
-setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/raw data/Indicadores_Financieros/2020")
+#AÑO 2020 ####
+setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Indicadores_Financieros/2020")
 
 en2020<-imp.data.xlsx(dia = "31",mes = "en",anio="2020", pestania = 1, skips = 0)
-fe2020<-imp.data.xlsx(dia = "28",mes = "fe",anio="2020", pestania = 1, skips = 0)
+fe2020<-imp.data.xlsx(dia = "29",mes = "fe",anio="2020", pestania = 1, skips = 0)
 ma2020<-imp.data.xlsx(dia = "31",mes = "ma",anio="2020", pestania = 1, skips = 0)
 ab2020<-imp.data.xlsx(dia = "30",mes = "ab",anio="2020", pestania = 1, skips = 0)
 my2020<-imp.data.xlsx(dia = "31",mes = "my",anio="2020", pestania = 1, skips = 0)
 jn2020<-imp.data.xlsx(dia = "30",mes = "jn",anio="2020", pestania = 1, skips = 0)
 jl2020<-imp.data.xlsx(dia = "31",mes = "jl",anio="2020", pestania = 1, skips = 0)
-
+ag2020<-imp.data.xlsx(dia = "31",mes = "ag",anio="2020", pestania = 1, skips = 0)
+se2020<-imp.data.xlsx(dia = "30",mes = "se",anio="2020", pestania = 1, skips = 0)
+oc2020<-imp.data.xlsx(dia = "31",mes = "oc",anio="2020", pestania = 1, skips = 0)
+no2020<-imp.data.xlsx(dia = "30",mes = "no",anio="2020", pestania = 1, skips = 0)
+di2020<-imp.data.xlsx(dia = "31",mes = "di",anio="2020", pestania = 1, skips = 0)
 
 en2020$Bancos
 fe2020$Bancos
@@ -422,7 +600,11 @@ ab2020$Bancos
 my2020$Bancos
 jn2020$Bancos
 jl2020$Bancos
-
+ag2020$Bancos
+se2020$Bancos
+oc2020$Bancos
+no2020$Bancos
+di2020$Bancos
 
 
 id4<-c("Azteca","BBVA","Comercio","BCP","Falabella","GNB",
@@ -435,6 +617,10 @@ id5<-c("Azteca","BBVA","Comercio","BCP","Falabella","GNB",
        "ICBC","BANBIF","Pichincha","Ripley","Santander","China","Citibank", 
        "Interbank","Mibanco","Scotiabank","Total Banca")
 
+id6<-c("Azteca","BBVA","China","Comercio","BCP","Falabella","GNB",
+       "ICBC","BANBIF","Pichincha","Ripley","Santander","Citibank", 
+       "Interbank","Mibanco","Scotiabank","Total Banca")
+
 en2020[,1]<-id4
 fe2020[,1]<-id4
 ma2020[,1]<-id4
@@ -442,8 +628,11 @@ ab2020[,1]<-id4
 my2020[,1]<-id4
 jn2020[,1]<-id4
 jl2020[,1]<-id5
-
-
+ag2020[,1]<-id6
+se2020[,1]<-id6
+oc2020[,1]<-id6
+no2020[,1]<-id6
+di2020[,1]<-id6
 
 View(en2020)
 View(fe2020)
@@ -452,10 +641,14 @@ View(ab2020)
 View(my2020)
 View(jn2020)
 View(jl2020)
-
+View(ag2020)
+View(se2020)
+View(oc2020)
+View(no2020)
+View(di2020)
 
 #Guardando la data
-setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/dataprocesada/Indicadores_Financieros/2020")
+setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Indicadores_Financieros/2020")
 
 saveRDS(en2020,file="en2020.RDS")
 saveRDS(fe2020,file="fe2020.RDS")
@@ -464,13 +657,21 @@ saveRDS(ab2020,file="ab2020.RDS")
 saveRDS(my2020,file="my2020.RDS")
 saveRDS(jn2020,file="jn2020.RDS")
 saveRDS(jl2020,file="jl2020.RDS")
+saveRDS(ag2020,file="ag2020.RDS")
+saveRDS(se2020,file="se2020.RDS")
+saveRDS(oc2020,file="oc2020.RDS")
+saveRDS(no2020,file="no2020.RDS")
+saveRDS(di2020,file="di2020.RDS")
+
+
+
 
 
 
 
 
 #Guardando data en una sola carpeta
-setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/dataprocesada/Indicadores_Financieros")
+setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Indicadores_Financieros")
 
 saveRDS(en2016,file="en2016.RDS")
 saveRDS(fe2016,file="fe2016.RDS")
@@ -531,3 +732,8 @@ saveRDS(ab2020,file="ab2020.RDS")
 saveRDS(my2020,file="my2020.RDS")
 saveRDS(jn2020,file="jn2020.RDS")
 saveRDS(jl2020,file="jl2020.RDS")
+saveRDS(ag2020,file="ag2020.RDS")
+saveRDS(se2020,file="se2020.RDS")
+saveRDS(oc2020,file="oc2020.RDS")
+saveRDS(no2020,file="no2020.RDS")
+saveRDS(di2020,file="di2020.RDS")

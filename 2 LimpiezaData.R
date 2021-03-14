@@ -1,8 +1,10 @@
 
 
-{library(dplyr)
+{
+library(dplyr)
 library(tidyr)
-library(readxl)} # LIBRERÍAS
+library(readxl)
+} # LIBRERÍAS
 
 ################################################### 2016 ##############################################################
 
