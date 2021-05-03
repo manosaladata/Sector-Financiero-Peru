@@ -31,7 +31,10 @@ dir.create('./Indicadores de las Empresas Bancarias')
 mainDir <- "C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias"
 setwd(mainDir)
 dir.create('./Indicadores Financieros') #Carpeta Indicadores Financieros de "raw data"
-
+mainDir <- "C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros"
+setwd(mainDir)
+# INDICE DE MOROSIDAD
+dir.create('./Indice_Morosidad')
 
                                       
 
@@ -63,17 +66,17 @@ dir.create('./Indice_Morosidad')
 
 
 
+
 {
 # CREANDO CARPETAS 2016 al 2020 PARA EL raw data
-mainDir <- "C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Indicadores_Financieros"
-
+mainDir <- "C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/Indice_Morosidad"
 subfolder_names <- as.character(c(2016:2020)) 
 for (j in 1:length(subfolder_names)){
   dir.create(file.path(mainDir, subfolder_names[j]), showWarnings = T)
 }
 
 # CREANDO CARPETAS 2016 al 2020 PARA LA data procesada
-mainDir <- "C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Indicadores_Financieros"
+mainDir <- "C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/Indice_Morosidad"
 
 subfolder_names <- as.character(c(2016:2020)) 
 for (j in 1:length(subfolder_names)){
