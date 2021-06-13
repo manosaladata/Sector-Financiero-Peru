@@ -1,9 +1,10 @@
 # 1 Objetivo: Crear la funcion ####
 
-
+{
 library(readxl) 
 library(dplyr)
 library(tidyr)
+}
 
 imp.data.xlsx<-function(mes, anio, pestania, dia, skips){
   
@@ -66,33 +67,37 @@ imp.data.xls<-function(mes, anio, pestania, dia, skips){
 
 #AÑO 2010
 {
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Indicadores_Financieros/2010")
+#setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Indicadores_Financieros/2010")
 
-en2010<-imp.data.xls(dia = "31",mes = "en",anio="2010", pestania = 1, skips = 0)
-fe2010<-imp.data.xls(dia = "29",mes = "fe",anio="2010", pestania = 1, skips = 0)
-ma2010<-imp.data.xls(dia = "31",mes = "ma",anio="2010", pestania = 1, skips = 0)
-ab2010<-imp.data.xls(dia = "30",mes = "ab",anio="2010", pestania = 1, skips = 0)
-my2010<-imp.data.xls(dia = "31",mes = "my",anio="2010", pestania = 1, skips = 0)
-jn2010<-imp.data.xls(dia = "30",mes = "jn",anio="2010", pestania = 1, skips = 0)
-jl2010<-imp.data.xls(dia = "31",mes = "jl",anio="2010", pestania = 1, skips = 0)
-ag2010<-imp.data.xls(dia = "31",mes = "ag",anio="2010", pestania = 1, skips = 0)
-se2010<-imp.data.xls(dia = "30",mes = "se",anio="2010", pestania = 1, skips = 0)
-oc2010<-imp.data.xls(dia = "31",mes = "oc",anio="2010", pestania = 1, skips = 0)
-no2010<-imp.data.xls(dia = "30",mes = "no",anio="2010", pestania = 1, skips = 0)
-di2010<-imp.data.xlsx(dia = "31",mes = "di",anio="2010", pestania = 1, skips = 0)
+#en2010<-imp.data.xls(dia = "31",mes = "en",anio="2010", pestania = 1, skips = 0)
+#fe2010<-imp.data.xls(dia = "29",mes = "fe",anio="2010", pestania = 1, skips = 0)
+#ma2010<-imp.data.xls(dia = "31",mes = "ma",anio="2010", pestania = 1, skips = 0)
+#ab2010<-imp.data.xls(dia = "30",mes = "ab",anio="2010", pestania = 1, skips = 0)
+#my2010<-imp.data.xls(dia = "31",mes = "my",anio="2010", pestania = 1, skips = 0)
+#jn2010<-imp.data.xls(dia = "30",mes = "jn",anio="2010", pestania = 1, skips = 0)
+#jl2010<-imp.data.xls(dia = "31",mes = "jl",anio="2010", pestania = 1, skips = 0)
+#ag2010<-imp.data.xls(dia = "31",mes = "ag",anio="2010", pestania = 1, skips = 0)
+#se2010<-imp.data.xls(dia = "30",mes = "se",anio="2010", pestania = 1, skips = 0)
+#oc2010<-imp.data.xls(dia = "31",mes = "oc",anio="2010", pestania = 1, skips = 0)
+#no2010<-imp.data.xls(dia = "30",mes = "no",anio="2010", pestania = 1, skips = 0)
+#di2010<-imp.data.xlsx(dia = "31",mes = "di",anio="2010", pestania = 1, skips = 0)
 
-en2010$Bancos
-(fe2010$Bancos)
-(ma2010$Bancos)
-(ab2010$Bancos)
-(my2010$Bancos)
-(jn2010$Bancos)
-(jl2010$Bancos)
-(ag2010$Bancos)
-(se2010$Bancos)
-(oc2010$Bancos)
-(no2010$Bancos)
-(di2010$Bancos)
+#en2010$Bancos
+#(fe2010$Bancos)
+#(ma2010$Bancos)
+#(ab2010$Bancos)
+#(my2010$Bancos)
+#(jn2010$Bancos)
+#(jl2010$Bancos)
+#(ag2010$Bancos)
+#(se2010$Bancos)
+#(oc2010$Bancos)
+#(no2010$Bancos)
+#(di2010$Bancos)
+}
+
+
+#AÑO 2016
 
 id1<-c("Azteca","Cencosud","BBVA","Comercio","BCP","Falabella","Pichincha",
        "GNB","ICBC","BANBIF","Ripley","Santander","Citibank", "Deutsche", 
@@ -148,7 +153,7 @@ saveRDS(oc2016,file="oc2016.RDS")
 saveRDS(no2016,file="no2016.RDS")
 saveRDS(di2016,file="di2016.RDS")
 
-}
+
 
 rlang::last_error()
 #AÑO 2015
