@@ -5,6 +5,7 @@ library(dplyr)
 library(tidyr)
 library(readxl)
 library(tidyverse)
+library(stringi)
 }
 
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -49,21 +50,8 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
     map_dfr(readRDS)
 }
 
-
 dim(df1);dim(df2);dim(df3);dim(df4);dim(df5);dim(df6);dim(df7);dim(df8);dim(df9);dim(df10);dim(df11);dim(df12)
 
-Deutsche<-df6[14,];Deutsche[1,]<-NA;Deutsche[,1]<-"Deutsche"
-
-Deutsche$Periodo<-as.Date("2016-07-31");names(Deutsche)<-names(df7);df7<-rbind(df7,Deutsche)
-Deutsche$Periodo<-as.Date("2016-08-31");names(Deutsche)<-names(df8);df8<-rbind(df8,Deutsche)
-Deutsche$Periodo<-as.Date("2016-09-30");names(Deutsche)<-names(df9);df9<-rbind(df9,Deutsche)
-Deutsche$Periodo<-as.Date("2016-10-31");names(Deutsche)<-names(df10);df10<-rbind(df10,Deutsche)
-Deutsche$Periodo<-as.Date("2016-11-30");names(Deutsche)<-names(df11);df11<-rbind(df11,Deutsche)
-Deutsche$Periodo<-as.Date("2016-12-31");names(Deutsche)<-names(df12);df12<-rbind(df12,Deutsche)
-
-df1<-df1[order(df1$Bancos),];df2<-df2[order(df2$Bancos),];df3<-df3[order(df3$Bancos),];df4<-df4[order(df4$Bancos),]
-df5<-df5[order(df5$Bancos),];df6<-df6[order(df6$Bancos),];df7<-df7[order(df7$Bancos),];df8<-df8[order(df8$Bancos),];df9<-df9[order(df9$Bancos),]
-df10<-df10[order(df10$Bancos),];df11<-df11[order(df11$Bancos),];df12<-df12[order(df12$Bancos),]
 
 en2016<-df1;fe2016<-df2;ma2016<-df3;ab2016<-df4;my2016<-df5;jn2016<-df6;jl2016<-df7;ag2016<-df8;se2016<-df9;oc2016<-df10;no2016<-df11;di2016<-df12
 
@@ -120,32 +108,8 @@ saveRDS(di2016,file="di2016.RDS")
   df12 <- list.files(pattern = "di2017.RDS") %>%
     map_dfr(readRDS)
 }
-Posicion_Global_Promedio<-df2[,16];Posicion_Global_Promedio[,1]<-NA
 
 dim(df1);dim(df2);dim(df3);dim(df4);dim(df5);dim(df6);dim(df7);dim(df8);dim(df9);dim(df10);dim(df11);dim(df12)
-
-df1<-cbind(df1[,c(1:15)],Posicion_Global_Promedio,df1[,c(16:22)])
-df11<-cbind(df11[,c(1:15)],Posicion_Global_Promedio,df11[,c(16:22)])
-df12<-cbind(df12[,c(1:15)],Posicion_Global_Promedio,df12[,c(16:22)])
-
-
-
-Deutsche[-1,]<-NA;Deutsche$Periodo<-as.Date("2017-01-31");names(Deutsche)<-names(df1);df1<-rbind(df1,Deutsche)
-Deutsche[-1,]<-NA;Deutsche[,1]<-"Deutsche";Deutsche$Periodo<-as.Date("2017-02-28");names(Deutsche)<-names(df2);df2<-rbind(df2,Deutsche)
-Deutsche[1,]<-NA;Deutsche[,1]<-"Deutsche";Deutsche$Periodo<-as.Date("2017-03-31");names(Deutsche)<-names(df3);df3<-rbind(df3,Deutsche)
-Deutsche[1,]<-NA;Deutsche[,1]<-"Deutsche";Deutsche$Periodo<-as.Date("2017-04-30");names(Deutsche)<-names(df4);df4<-rbind(df4,Deutsche)
-Deutsche[1,]<-NA;Deutsche[,1]<-"Deutsche";Deutsche$Periodo<-as.Date("2017-05-31");names(Deutsche)<-names(df5);df5<-rbind(df5,Deutsche)
-Deutsche[1,]<-NA;Deutsche[,1]<-"Deutsche";Deutsche$Periodo<-as.Date("2017-06-30");names(Deutsche)<-names(df6);df6<-rbind(df6,Deutsche)
-Deutsche[1,]<-NA;Deutsche[,1]<-"Deutsche";Deutsche$Periodo<-as.Date("2017-07-31");names(Deutsche)<-names(df7);df7<-rbind(df7,Deutsche)
-Deutsche[1,]<-NA;Deutsche[,1]<-"Deutsche";Deutsche$Periodo<-as.Date("2017-08-31");names(Deutsche)<-names(df8);df8<-rbind(df8,Deutsche)
-Deutsche[1,]<-NA;Deutsche[,1]<-"Deutsche";Deutsche$Periodo<-as.Date("2017-09-30");names(Deutsche)<-names(df9);df9<-rbind(df9,Deutsche)
-Deutsche[1,]<-NA;Deutsche[,1]<-"Deutsche";Deutsche$Periodo<-as.Date("2017-10-31");names(Deutsche)<-names(df10);df10<-rbind(df10,Deutsche)
-Deutsche[1,]<-NA;Deutsche[,1]<-"Deutsche";Deutsche$Periodo<-as.Date("2017-11-30");names(Deutsche)<-names(df11);df11<-rbind(df11,Deutsche)
-Deutsche[1,]<-NA;Deutsche[,1]<-"Deutsche";Deutsche$Periodo<-as.Date("2017-12-31");names(Deutsche)<-names(df12);df12<-rbind(df12,Deutsche)
-
-df1<-df1[order(df1$Bancos),];df2<-df2[order(df2$Bancos),];df3<-df3[order(df3$Bancos),];df4<-df4[order(df4$Bancos),]
-df5<-df5[order(df5$Bancos),];df6<-df6[order(df6$Bancos),];df7<-df7[order(df7$Bancos),];df8<-df8[order(df8$Bancos),];df9<-df9[order(df9$Bancos),]
-df10<-df10[order(df10$Bancos),];df11<-df11[order(df11$Bancos),];df12<-df12[order(df12$Bancos),]
 
 en2017<-df1;fe2017<-df2;ma2017<-df3;ab2017<-df4;my2017<-df5;jn2017<-df6;jl2017<-df7;ag2017<-df8;se2017<-df9;oc2017<-df10;no2017<-df11;di2017<-df12
 
@@ -161,8 +125,6 @@ saveRDS(se2017,file="se2017.RDS")
 saveRDS(oc2017,file="oc2017.RDS")
 saveRDS(no2017,file="no2017.RDS")
 saveRDS(di2017,file="di2017.RDS")
-
-#View(Posicion_Global_Promedio)
 
 #AÑO 2018 ####
 {
@@ -203,46 +165,7 @@ saveRDS(di2017,file="di2017.RDS")
     map_dfr(readRDS)
 }
 
-
-Ratio_Capital_Global<-en2016[,16];Posicion_Global_Promedio[,1]<-NA
-
 dim(df1);dim(df2);dim(df3);dim(df4);dim(df5);dim(df6);dim(df7);dim(df8);dim(df9);dim(df10);dim(df11);dim(df12)
-
-df1<-cbind(df1[,c(1:15)],Posicion_Global_Promedio,df1[,c(16:22)])
-df11<-cbind(df11[,c(1:15)],Posicion_Global_Promedio,df11[,c(16:22)])
-df12<-cbind(df12[,c(1:15)],Posicion_Global_Promedio,df12[,c(16:22)])
-
-Deutsche<-df6[14,];Deutsche[1,]<-NA;Deutsche[,1]<-"Deutsche"
-
-Deutsche$Periodo<-as.Date("2018-01-31");names(Deutsche)<-names(df1);df1<-rbind(df1,Deutsche)
-Deutsche$Periodo<-as.Date("2018-02-28");names(Deutsche)<-names(df2);df2<-rbind(df2,Deutsche)
-Deutsche$Periodo<-as.Date("2018-03-31");names(Deutsche)<-names(df3);df3<-rbind(df3,Deutsche)
-Deutsche$Periodo<-as.Date("2018-04-30");names(Deutsche)<-names(df4);df4<-rbind(df4,Deutsche)
-Deutsche$Periodo<-as.Date("2018-05-31");names(Deutsche)<-names(df5);df5<-rbind(df5,Deutsche)
-Deutsche$Periodo<-as.Date("2018-06-30");names(Deutsche)<-names(df6);df6<-rbind(df6,Deutsche)
-Deutsche$Periodo<-as.Date("2018-07-31");names(Deutsche)<-names(df7);df7<-rbind(df7,Deutsche)
-Deutsche$Periodo<-as.Date("2018-08-31");names(Deutsche)<-names(df8);df8<-rbind(df8,Deutsche)
-Deutsche$Periodo<-as.Date("2018-09-30");names(Deutsche)<-names(df9);df9<-rbind(df9,Deutsche)
-Deutsche$Periodo<-as.Date("2018-10-31");names(Deutsche)<-names(df10);df10<-rbind(df10,Deutsche)
-Deutsche$Periodo<-as.Date("2018-11-30");names(Deutsche)<-names(df11);df11<-rbind(df11,Deutsche)
-Deutsche$Periodo<-as.Date("2018-12-31");names(Deutsche)<-names(df12);df12<-rbind(df12,Deutsche)
-
-dim(df1);dim(df2);dim(df3);dim(df4);dim(df5);dim(df6);dim(df7);dim(df8);dim(df9);dim(df10);dim(df11);dim(df12)
-
-df1<-df1[order(df1$Bancos),];df2<-df2[order(df2$Bancos),];df3<-df3[order(df3$Bancos),];df4<-df4[order(df4$Bancos),]
-df5<-df5[order(df5$Bancos),];df6<-df6[order(df6$Bancos),];df7<-df7[order(df7$Bancos),];df8<-df8[order(df8$Bancos),];df9<-df9[order(df9$Bancos),]
-df10<-df10[order(df10$Bancos),];df11<-df11[order(df11$Bancos),];df12<-df12[order(df12$Bancos),]
-
-PosGlobprom_PatEfec<-as.data.frame(matrix(nrow = 18,ncol = 1));names(PosGlobprom_PatEfec)<-c("Posición Global Promedio / Patrimonio Efectivo **")
-df1<-cbind(df1,PosGlobprom_PatEfec);df2<-cbind(df2,PosGlobprom_PatEfec);df3<-cbind(df3,PosGlobprom_PatEfec);df4<-cbind(df4,PosGlobprom_PatEfec)
-df5<-cbind(df5,PosGlobprom_PatEfec);df6<-cbind(df6,PosGlobprom_PatEfec);df7<-cbind(df7,PosGlobprom_PatEfec);df8<-cbind(df8,PosGlobprom_PatEfec);df9<-cbind(df9,PosGlobprom_PatEfec)
-df10<-cbind(df10,PosGlobprom_PatEfec);df11<-cbind(df11,PosGlobprom_PatEfec);df12<-cbind(df12,PosGlobprom_PatEfec)
-
-df1<-df1[order(names(df1))];df2<-df2[order(names(df2))];df3<-df3[order(names(df3))];df4<-df4[order(names(df4))];df5<-df5[order(names(df5))];df6<-df6[order(names(df6))];df7<-df7[order(names(df7))]
-df8<-df8[order(names(df8))];df9<-df9[order(names(df9))];df10<-df10[order(names(df10))];df11<-df11[order(names(df11))];df12<-df12[order(names(df12))]
-
-
-
 
 en2018<-df1;fe2018<-df2;ma2018<-df3;ab2018<-df4;my2018<-df5;jn2018<-df6;jl2018<-df7;ag2018<-df8;se2018<-df9;oc2018<-df10;no2018<-df11;di2018<-df12
 
@@ -372,4 +295,40 @@ saveRDS(oc2020,file="oc2020.RDS")
 saveRDS(no2020,file="no2020.RDS")
 saveRDS(di2020,file="di2020.RDS")
 
-names(en2016);names(en2017);names(en2018);names(en2019);names(en2020)
+en2016_1<-en2016[,-17];fe2016_1<-fe2016[,-17];ma2016_1<-ma2016[,-17];ab2016_1<-ab2016[,-17];my2016_1<-my2016[,-17];jn2016_1<-jn2016[,-17]
+jl2016_1<-jl2016[,-17];ag2016_1<-ag2016[,-17];se2016_1<-se2016[,-17];oc2016_1<-oc2016[,-17];no2016_1<-no2016[,-17];di2016_1<-di2016[,-17]
+
+fe2017_1<-fe2017[,-17];ma2017_1<-ma2017[,-17];ab2017_1<-ab2017[,-17];my2017_1<-my2017[,-17];jn2017_1<-jn2017[,-17]
+jl2017_1<-jl2017[,-17];ag2017_1<-ag2017[,-17];se2017_1<-se2017[,-17];oc2017_1<-oc2017[,-17]
+
+variables<-c("Bancos","Caja y Bancos en ME / Obligaciones a la Vista ME ( N° de veces)","Caja y Bancos MN / Obligaciones a la Vista MN ( N° de veces )","Créditos Atrasados (criterio SBS)* / Créditos Directos",
+             "Créditos Atrasados con más de 90 días de atraso / Créditos Directos","Créditos Atrasados ME (criterio SBS)* / Créditos Directos ME","Créditos Atrasados MN (criterio SBS)* / Créditos Directos MN",
+             "Créditos Directos / Personal ( S/ Miles )","Créditos Refinanciados y Reestructurados / Créditos Directos","Depósitos / Número de Oficinas ( S/ Miles )","Gastos de Administración Anualizados / Activo Productivo Promedio",
+             "Gastos de Operación / Margen Financiero Total","Ingresos Financieros / Ingresos Totales","Ingresos Financieros Anualizados / Activo Productivo Promedio","Pasivo Total / Capital Social y Reservas ( N° de veces )",
+             "Periodo","Provisiones / Créditos Atrasados","Ratio de Capital Global (al mes anterior)","Ratio de Liquidez ME (Promedio de saldos del mes)","Ratio de Liquidez MN (Promedio de saldos del mes)",
+             "Utilidad Neta Anualizada / Activo Promedio","Utilidad Neta Anualizada / Patrimonio Promedio")
+variables<-stri_trans_general(variables,"Latin-ASCII")
+
+names(en2016_1)<-variables;names(fe2016_1)<-variables;names(ma2016_1)<-variables;names(ab2016_1)<-variables;names(my2016_1)<-variables;names(jn2016_1)<-variables;names(jl2016_1)<-variables;names(ag2016_1)<-variables;names(se2016_1)<-variables;names(oc2016_1)<-variables;names(no2016_1)<-variables;names(di2016_1)<-variables
+names(en2017)<-variables;names(fe2017_1)<-variables;names(ma2017_1)<-variables;names(ab2017_1)<-variables;names(my2017_1)<-variables;names(jn2017_1)<-variables;names(jl2017_1)<-variables;names(ag2017_1)<-variables;names(se2017_1)<-variables;names(oc2017_1)<-variables;names(no2017)<-variables;names(di2017)<-variables
+names(en2018)<-variables;names(fe2018)<-variables;names(ma2018)<-variables;names(ab2018)<-variables;names(my2018)<-variables;names(jn2018)<-variables;names(jl2018)<-variables;names(ag2018)<-variables;names(se2018)<-variables;names(oc2018)<-variables;names(no2018)<-variables;names(di2018)<-variables
+names(en2019)<-variables;names(fe2019)<-variables;names(ma2019)<-variables;names(ab2019)<-variables;names(my2019)<-variables;names(jn2019)<-variables;names(jl2019)<-variables;names(ag2019)<-variables;names(se2019)<-variables;names(oc2019)<-variables;names(no2019)<-variables;names(di2019)<-variables
+names(en2020)<-variables;names(fe2020)<-variables;names(ma2020)<-variables;names(ab2020)<-variables;names(my2020)<-variables;names(jn2020)<-variables;names(jl2020)<-variables;names(ag2020)<-variables;names(se2020)<-variables;names(oc2020)<-variables;names(no2020)<-variables;names(di2020)<-variables
+
+
+banca_multiple<-rbind(en2016_1,fe2016_1,ma2016_1,ab2016_1,my2016_1,jn2016_1,jl2016_1,ag2016_1,se2016_1,oc2016_1,no2016_1,di2016_1,en2017,fe2017_1,ma2017_1,ab2017_1,my2017_1,jn2017_1,
+                     jl2017_1,ag2017_1,se2017_1,oc2017_1,no2017,di2017,en2018,fe2018,ma2018,ab2018,my2018,jn2018,jl2018,ag2018,se2018,oc2018,
+                     no2018,di2018,en2020,fe2020,ma2020,ab2020,my2020,jn2020,jl2020,ag2020,se2020,oc2020,no2020,di2020,en2020,fe2020,ma2020,
+                     ab2020,my2020,jn2020,jl2020,ag2020,se2020,oc2020,no2020,di2020)
+
+setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+
+banca_multiple<-as.data.frame(banca_multiple)
+total_banca_multiple<-banca_multiple[banca_multiple$Bancos=="Total Banca Multiple",]
+banca_multiple<-banca_multiple[!banca_multiple$Bancos=="Total Banca Multiple",]
+
+
+saveRDS(banca_multiple,file="banca_multiple.RDS")
+write.csv(banca_multiple, "banca_multiple.csv",fileEncoding = "UTF-8",row.names = FALSE)
+saveRDS(total_banca_multiple,file="total_banca_multiple.RDS")
+write.csv(total_banca_multiple, "total_banca_multiple.csv",fileEncoding = "UTF-8",row.names = FALSE)

@@ -55,7 +55,8 @@ b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán colu
 i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2016-01-31")
 #View(a)
-##i[is.na(i)] <- 0
+i<-i[order(names(i))]
+
 
 # Guardando la data en carpeta "dataprocesada"
 
@@ -116,7 +117,7 @@ b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán colu
 i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2016-02-29")
 
-#i[is.na(i)]<-0
+i<-i[order(names(i))]
 
 # Guardando la data en carpeta "dataprocesada"
 
@@ -180,7 +181,7 @@ i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2016-03-31")
 
 
-#i[is.na(i)]<-0
+i<-i[order(names(i))]
 # Guardando la data en carpeta "dataprocesada"
 
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -243,7 +244,7 @@ b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán colu
 i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2016-04-30")
 
-#i[is.na(i)]<-0
+i<-i[order(names(i))]
 
 # Guardando la data en carpeta "dataprocesada"
 
@@ -306,7 +307,7 @@ b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán colu
 i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2016-05-31")
 
-#i[is.na(i)]<-0
+i<-i[order(names(i))]
 
 # Guardando la data en carpeta "dataprocesada"
 
@@ -369,7 +370,7 @@ i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2016-06-30")
 
 
-#i[is.na(i)]<-0
+i<-i[order(names(i))]
 
 # Guardando la data en carpeta "dataprocesada"
 
@@ -431,7 +432,7 @@ i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2016-07-31")
 
 
-#i[is.na(i)]<-0
+i<-i[order(names(i))]
 # Guardando la data en carpeta "dataprocesada"
 
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -496,7 +497,7 @@ i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2016-08-31")
 
 
-#i[is.na(i)]<-0
+i<-i[order(names(i))]
 # Guardando la data en carpeta "dataprocesada"
 
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -560,7 +561,7 @@ i$Periodo= as.Date("2016-09-30")
 #View(se2016)
 
 
-#i[is.na(i)]<-0
+i<-i[order(names(i))]
 # Guardando la data en carpeta "dataprocesada"
 
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -628,7 +629,7 @@ i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2016-10-31")
 
 
-#i[is.na(i)]<-0
+i<-i[order(names(i))]
 # Guardando la data en carpeta "dataprocesada"
 
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -690,7 +691,7 @@ b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán colu
 i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2016-11-30")
 
-#i[is.na(i)]<-0
+i<-i[order(names(i))]
 
 
 # Guardando la data en carpeta "dataprocesada"
@@ -753,7 +754,7 @@ i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2016-12-31")
 
 
-#i[is.na(i)]<-0
+i<-i[order(names(i))]
 # Guardando la data en carpeta "dataprocesada"
 
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -819,7 +820,7 @@ b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán colu
 i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2017-01-31")
 
-##i[is.na(i)] <- 0
+i<-i[order(names(i))]
   
 # Guardando la data en carpeta "dataprocesada"
   
@@ -880,7 +881,7 @@ en2017<-i
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2017-02-28")
   
-  #i[is.na(i)]<-0
+  i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -943,7 +944,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i$Periodo= as.Date("2017-03-31")
   
   
-  #i[is.na(i)]<-0
+  i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -1005,7 +1006,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2017-04-30")
   
-  #i[is.na(i)]<-0
+  i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -1066,7 +1067,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2017-05-31")
   
-  #i[is.na(i)]<-0
+  i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -1129,7 +1130,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i$Periodo= as.Date("2017-06-30")
   
   
-  #i[is.na(i)]<-0
+  i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -1192,7 +1193,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i$Periodo= as.Date("2017-07-31")
   
   
-  #i[is.na(i)]<-0
+  i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -1255,7 +1256,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i$Periodo= as.Date("2017-08-31")
   
   
-  #i[is.na(i)]<-0
+  i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -1318,7 +1319,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i$Periodo= as.Date("2017-09-30")
   #View(se2017)
   
-  #i[is.na(i)]<-0
+  i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -1383,7 +1384,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i$Periodo= as.Date("2017-10-31")
   
   
-  #i[is.na(i)]<-0
+  i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -1445,7 +1446,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2017-11-30")
   
-  #i[is.na(i)]<-0
+  i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -1509,7 +1510,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i$Periodo= as.Date("2017-12-31")
   
   
-  #i[is.na(i)]<-0
+  i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -1577,7 +1578,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2018-01-31")
   
-  #i[is.na(i)] <- 0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -1585,7 +1586,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   saveRDS(i,file="en2018.RDS")
   
   en2018<-i
-  
+ 
   
 } # ENERO 2018
 
@@ -1638,7 +1639,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2018-02-28")
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -1701,7 +1702,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2018-03-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -1763,7 +1764,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2018-04-30")
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -1824,7 +1825,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2018-05-31")
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -1887,7 +1888,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2018-06-30")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -1950,7 +1951,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2018-07-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -2013,7 +2014,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2018-08-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -2076,7 +2077,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2018-09-30")
   #View(se2018)
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -2141,7 +2142,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2018-10-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -2203,7 +2204,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2018-11-30")
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -2267,7 +2268,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2018-12-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -2335,7 +2336,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2019-01-31")
   
-  #i[is.na(i)] <- 0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -2396,7 +2397,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2019-02-28")
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -2458,7 +2459,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2019-03-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -2520,7 +2521,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2019-04-30")
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -2581,7 +2582,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2019-05-31")
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -2644,7 +2645,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2019-06-30")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -2707,7 +2708,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2019-07-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -2770,7 +2771,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2019-08-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -2833,7 +2834,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2019-09-30")
   #View(se2019)
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -2898,7 +2899,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2019-10-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -2960,7 +2961,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2019-11-30")
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -3024,7 +3025,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2019-12-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -3091,7 +3092,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2020-01-31")
   
-  #i[is.na(i)] <- 0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -3152,7 +3153,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2020-02-29")
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -3214,7 +3215,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2020-03-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -3276,7 +3277,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2020-04-30")
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -3337,7 +3338,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2020-05-31")
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -3400,7 +3401,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2020-06-30")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -3463,7 +3464,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2020-07-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -3526,7 +3527,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2020-08-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -3590,7 +3591,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i$Periodo= as.Date("2020-09-30")
   
   
-  #  i[is.na(i)]<-0
+  i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
   setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -3654,7 +3655,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i$Periodo= as.Date("2020-10-31")
   
   
-  #  i[is.na(i)]<-0
+  i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
   setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -3718,7 +3719,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i$Periodo= as.Date("2020-11-30")
   
   
-  #  i[is.na(i)]<-0
+  i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
   setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -3782,7 +3783,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i$Periodo= as.Date("2020-12-31")
   
   
-  #  i[is.na(i)]<-0
+  i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
   setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
