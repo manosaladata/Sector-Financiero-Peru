@@ -16,13 +16,11 @@ library(readxl)
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2016")
 
 a<-read_xls("B-2401-en2016.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
-
 a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
-
 options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
-#View(a)
+
 names(a)
-View(a)
+
 names(a)[10] #seleccionamos el valor 10
 a<-a[,-10] # quitamos la columna 10 #usa dplyr como ejercicio recuerda usar "-" y select
 
@@ -31,8 +29,8 @@ names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
              "Pichincha","BIF","Scotiabank",
              "Citibank","Interbank","Mibanco",
              "GNB","Falabella","Santander","Ripley","Azteca","Deutsche","Cencosud","ICBC",
-             "Total Empresas Financieras")
-#View(a)
+             "Total Banca Multiple")
+##View(a)
 
 exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
 exc # va a aplicar todo excepto a la primera columna
@@ -40,7 +38,7 @@ a[,exc] # ven? no aparece la columns "variables"
 a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
 a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
 a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
-#View(a)
+##View(a)
 
 
 
@@ -56,8 +54,9 @@ b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán colu
                                        
 i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2016-01-31")
+#View(a)
+i<-i[order(names(i))]
 
-##i[is.na(i)] <- 0
 
 # Guardando la data en carpeta "dataprocesada"
 
@@ -65,7 +64,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
 saveRDS(i,file="en2016.RDS")
 
 en2016<-i
-View(en2016)
+
 
 } # ENERO 2016
 
@@ -81,7 +80,7 @@ a<-read_xls("B-2401-fe2016.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras 
 a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
 
 options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
-#View(a)
+##View(a)
 names(a)
 
 names(a)[10] #seleccionamos el valor 10
@@ -92,8 +91,8 @@ names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
              "Pichincha","BIF","Scotiabank",
              "Citibank","Interbank","Mibanco",
              "GNB","Falabella","Santander","Ripley","Azteca","Deutsche","Cencosud","ICBC",
-             "Total Empresas Financieras")
-#View(a)
+             "Total Banca Multiple")
+##View(a)
 
 exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
 exc # va a aplicar todo excepto a la primera columna
@@ -101,7 +100,7 @@ a[,exc] # ven? no aparece la columns "variables"
 a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
 a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
 a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
-#View(a)
+##View(a)
 
 
 
@@ -118,7 +117,7 @@ b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán colu
 i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2016-02-29")
 
-#i[is.na(i)]<-0
+i<-i[order(names(i))]
 
 # Guardando la data en carpeta "dataprocesada"
 
@@ -143,7 +142,7 @@ a<-read_xls("B-2401-ma2016.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras 
 a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
 
 options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
-#View(a)
+##View(a)
 names(a)
 
 names(a)[10] #seleccionamos el valor 10
@@ -154,8 +153,8 @@ names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
              "Pichincha","BIF","Scotiabank",
              "Citibank","Interbank","Mibanco",
              "GNB","Falabella","Santander","Ripley","Azteca","Deutsche","Cencosud","ICBC",
-             "Total Empresas Financieras")
-#View(a)
+             "Total Banca Multiple")
+##View(a)
 #names(a)
 
 exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
@@ -164,7 +163,7 @@ a[,exc] # ven? no aparece la columns "variables"
 a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
 a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
 a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
-#View(a)
+##View(a)
 
 
 
@@ -182,7 +181,7 @@ i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2016-03-31")
 
 
-#i[is.na(i)]<-0
+i<-i[order(names(i))]
 # Guardando la data en carpeta "dataprocesada"
 
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -207,7 +206,7 @@ a<-read_xls("B-2401-ab2016.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras 
 a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
 
 options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
-#View(a)
+##View(a)
 names(a)
 
 names(a)[10] #seleccionamos el valor 10
@@ -218,8 +217,8 @@ names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
              "Pichincha","BIF","Scotiabank",
              "Citibank","Interbank","Mibanco",
              "GNB","Falabella","Santander","Ripley","Azteca","Deutsche","Cencosud","ICBC",
-             "Total Empresas Financieras")
-#View(a)
+             "Total Banca Multiple")
+##View(a)
 #names(a)
 
 exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
@@ -228,7 +227,7 @@ a[,exc] # ven? no aparece la columns "variables"
 a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
 a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
 a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
-#View(a)
+##View(a)
 
 
 
@@ -245,7 +244,7 @@ b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán colu
 i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2016-04-30")
 
-#i[is.na(i)]<-0
+i<-i[order(names(i))]
 
 # Guardando la data en carpeta "dataprocesada"
 
@@ -264,11 +263,13 @@ ab2016=i
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2016")
 
 a<-read_xls("B-2401-my2016.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
+##View(a)
 
+a[21,17]<-as.character(0)
 a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
-
+a[14,17]<-NA
 options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
-#View(a)
+##View(a)
 names(a)
 
 names(a)[10] #seleccionamos el valor 10
@@ -279,8 +280,8 @@ names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
              "Pichincha","BIF","Scotiabank",
              "Citibank","Interbank","Mibanco",
              "GNB","Falabella","Santander","Ripley","Azteca","Deutsche","Cencosud","ICBC",
-             "Total Empresas Financieras")
-#View(a)
+             "Total Banca Multiple")
+##View(a)
 #names(a)
 
 exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
@@ -289,7 +290,7 @@ a[,exc] # ven? no aparece la columns "variables"
 a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
 a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
 a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
-#View(a)
+##View(a)
 
 
 
@@ -306,7 +307,7 @@ b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán colu
 i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2016-05-31")
 
-#i[is.na(i)]<-0
+i<-i[order(names(i))]
 
 # Guardando la data en carpeta "dataprocesada"
 
@@ -330,7 +331,7 @@ a<-read_xls("B-2401-jn2016.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras 
 a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
 
 options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
-#View(a)
+##View(a)
 names(a)
 
 names(a)[10] #seleccionamos el valor 10
@@ -341,8 +342,8 @@ names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
              "Pichincha","BIF","Scotiabank",
              "Citibank","Interbank","Mibanco",
              "GNB","Falabella","Santander","Ripley","Azteca","Deutsche","Cencosud","ICBC",
-             "Total Empresas Financieras")
-#View(a)
+             "Total Banca Multiple")
+##View(a)
 #names(a)
 
 exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
@@ -351,7 +352,7 @@ a[,exc] # ven? no aparece la columns "variables"
 a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
 a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
 a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
-#View(a)
+##View(a)
 
 
 
@@ -369,7 +370,7 @@ i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2016-06-30")
 
 
-#i[is.na(i)]<-0
+i<-i[order(names(i))]
 
 # Guardando la data en carpeta "dataprocesada"
 
@@ -393,7 +394,7 @@ a<-read_xls("B-2401-jl2016.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras 
 a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
 
 options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
-#View(a)
+##View(a)
 #names(a)
 
 names(a)[10] #seleccionamos el valor 10
@@ -404,8 +405,8 @@ names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
              "Pichincha","BIF","Scotiabank",
              "Citibank","Interbank","Mibanco",
              "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-             "Total Empresas Financieras")
-#View(a)
+             "Total Banca Multiple")
+##View(a)
 #names(a)
 
 exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
@@ -414,7 +415,7 @@ a[,exc] # ven? no aparece la columns "variables"
 a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
 a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
 a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
-#View(a)
+##View(a)
 
 
 
@@ -427,19 +428,20 @@ b<-a %>% gather(Bancos,valores,-variables)
 b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán columnas)
 # según los valores
 
-
 i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2016-07-31")
 
 
-#i[is.na(i)]<-0
+i<-i[order(names(i))]
 # Guardando la data en carpeta "dataprocesada"
 
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
 saveRDS(i,file="jl2016.RDS")
 
 jl2016<-i
-View(jl2016)
+
+
+
 } # JULIO 2016 
 
 
@@ -456,7 +458,7 @@ a<-read_xls("B-2401-ag2016.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras 
 a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
 
 options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
-#View(a)
+##View(a)
 names(a)
 
 names(a)[10] #seleccionamos el valor 10
@@ -467,8 +469,8 @@ names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
              "Pichincha","BIF","Scotiabank",
              "Citibank","Interbank","Mibanco",
              "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-             "Total Empresas Financieras")
-#View(a)
+             "Total Banca Multiple")
+##View(a)
 #names(a)
 
 exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
@@ -477,7 +479,7 @@ a[,exc] # ven? no aparece la columns "variables"
 a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
 a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
 a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
-#View(a)
+##View(a)
 
 
 
@@ -495,7 +497,7 @@ i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2016-08-31")
 
 
-#i[is.na(i)]<-0
+i<-i[order(names(i))]
 # Guardando la data en carpeta "dataprocesada"
 
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -519,7 +521,7 @@ a<-read_xls("B-2401-se2016.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras 
 a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
 
 options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
-#View(a)
+##View(a)
 names(a)
 
 names(a)[10] #seleccionamos el valor 10
@@ -530,8 +532,8 @@ names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
              "Pichincha","BIF","Scotiabank",
              "Citibank","Interbank","Mibanco",
              "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-             "Total Empresas Financieras")
-#View(a)
+             "Total Banca Multiple")
+##View(a)
 #names(a)
 
 exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
@@ -540,7 +542,7 @@ a[,exc] # ven? no aparece la columns "variables"
 a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
 a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
 a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
-#View(a)
+##View(a)
 
 
 
@@ -558,7 +560,8 @@ i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2016-09-30")
 #View(se2016)
 
-#i[is.na(i)]<-0
+
+i<-i[order(names(i))]
 # Guardando la data en carpeta "dataprocesada"
 
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -587,7 +590,7 @@ a<-read_xls("B-2401-oc2016.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras 
 a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
 
 options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
-#View(a)
+##View(a)
 names(a)
 
 names(a)[10] #seleccionamos el valor 10
@@ -598,8 +601,8 @@ names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
              "Pichincha","BIF","Scotiabank",
              "Citibank","Interbank","Mibanco",
              "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-             "Total Empresas Financieras")
-#View(a)
+             "Total Banca Multiple")
+##View(a)
 #names(a)
 
 exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
@@ -608,7 +611,7 @@ a[,exc] # ven? no aparece la columns "variables"
 a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
 a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
 a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
-#View(a)
+##View(a)
 
 
 
@@ -626,7 +629,7 @@ i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2016-10-31")
 
 
-#i[is.na(i)]<-0
+i<-i[order(names(i))]
 # Guardando la data en carpeta "dataprocesada"
 
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -650,7 +653,7 @@ a<-read_xls("B-2401-no2016.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras 
 a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
 
 options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
-#View(a)
+##View(a)
 names(a)
 
 names(a)[10] #seleccionamos el valor 10
@@ -661,8 +664,8 @@ names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
              "Pichincha","BIF","Scotiabank",
              "Citibank","Interbank","Mibanco",
              "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-             "Total Empresas Financieras")
-#View(a)
+             "Total Banca Multiple")
+##View(a)
 #names(a)
 
 exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
@@ -671,7 +674,7 @@ a[,exc] # ven? no aparece la columns "variables"
 a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
 a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
 a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
-#View(a)
+##View(a)
 
 
 
@@ -688,7 +691,8 @@ b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán colu
 i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2016-11-30")
 
-#i[is.na(i)]<-0
+i<-i[order(names(i))]
+
 
 # Guardando la data en carpeta "dataprocesada"
 
@@ -696,8 +700,6 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
 saveRDS(i,file="no2016.RDS")
 
 no2016<-i
-#View(no2016)
-
 } # NOVIEMBRE 2016
 
 
@@ -713,7 +715,7 @@ a<-read_xlsx("B-2401-di2016.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras
 a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
 
 options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
-#View(a)
+##View(a)
 names(a)
 
 names(a)[10] #seleccionamos el valor 10
@@ -724,8 +726,8 @@ names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
              "Pichincha","BIF","Scotiabank",
              "Citibank","Interbank","Mibanco",
              "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-             "Total Empresas Financieras")
-#View(a)
+             "Total Banca Multiple")
+##View(a)
 #names(a)
 
 exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
@@ -734,7 +736,7 @@ a[,exc] # ven? no aparece la columns "variables"
 a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
 a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
 a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
-#View(a)
+##View(a)
 
 
 
@@ -752,7 +754,7 @@ i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2016-12-31")
 
 
-#i[is.na(i)]<-0
+i<-i[order(names(i))]
 # Guardando la data en carpeta "dataprocesada"
 
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -763,6 +765,8 @@ di2016<-i
 
 
 } # DICIEMBRE 2016
+
+#dim(en2016);dim(fe2016);dim(ma2016);dim(ab2016);dim(my2016);dim(jn2016);dim(jl2016);dim(ag2016);dim(se2016);dim(oc2016);dim(no2016);dim(di2016)
 
 ####################################################################################################################################################
 ############################################  2017 ############################################################################################
@@ -790,7 +794,7 @@ names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
 #View(a)
   
 exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
@@ -816,7 +820,7 @@ b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán colu
 i<-b %>% spread(variables,valores)
 i$Periodo= as.Date("2017-01-31")
 
-##i[is.na(i)] <- 0
+i<-i[order(names(i))]
   
 # Guardando la data en carpeta "dataprocesada"
   
@@ -851,7 +855,7 @@ en2017<-i
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   
   exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
@@ -877,7 +881,7 @@ en2017<-i
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2017-02-28")
   
-  #i[is.na(i)]<-0
+  i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -912,7 +916,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -940,7 +944,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i$Periodo= as.Date("2017-03-31")
   
   
-  #i[is.na(i)]<-0
+  i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -975,7 +979,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -1002,7 +1006,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2017-04-30")
   
-  #i[is.na(i)]<-0
+  i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -1036,7 +1040,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -1063,7 +1067,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2017-05-31")
   
-  #i[is.na(i)]<-0
+  i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -1098,7 +1102,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -1126,7 +1130,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i$Periodo= as.Date("2017-06-30")
   
   
-  #i[is.na(i)]<-0
+  i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -1161,7 +1165,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -1189,7 +1193,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i$Periodo= as.Date("2017-07-31")
   
   
-  #i[is.na(i)]<-0
+  i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -1224,7 +1228,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -1252,7 +1256,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i$Periodo= as.Date("2017-08-31")
   
   
-  #i[is.na(i)]<-0
+  i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -1287,7 +1291,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -1315,7 +1319,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i$Periodo= as.Date("2017-09-30")
   #View(se2017)
   
-  #i[is.na(i)]<-0
+  i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -1352,7 +1356,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -1380,7 +1384,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i$Periodo= as.Date("2017-10-31")
   
   
-  #i[is.na(i)]<-0
+  i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -1415,7 +1419,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -1442,7 +1446,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2017-11-30")
   
-  #i[is.na(i)]<-0
+  i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -1478,7 +1482,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -1506,7 +1510,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i$Periodo= as.Date("2017-12-31")
   
   
-  #i[is.na(i)]<-0
+  i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -1548,7 +1552,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   
   exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
@@ -1574,7 +1578,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2018-01-31")
   
-  #i[is.na(i)] <- 0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -1582,7 +1586,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   saveRDS(i,file="en2018.RDS")
   
   en2018<-i
-  
+ 
   
 } # ENERO 2018
 
@@ -1609,7 +1613,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   
   exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
@@ -1635,7 +1639,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2018-02-28")
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -1670,7 +1674,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -1698,7 +1702,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2018-03-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -1733,7 +1737,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -1760,7 +1764,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2018-04-30")
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -1794,7 +1798,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -1821,7 +1825,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2018-05-31")
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -1856,7 +1860,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -1884,7 +1888,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2018-06-30")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -1919,7 +1923,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -1947,7 +1951,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2018-07-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -1982,7 +1986,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -2010,7 +2014,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2018-08-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -2045,7 +2049,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -2073,7 +2077,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2018-09-30")
   #View(se2018)
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -2110,7 +2114,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -2138,7 +2142,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2018-10-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -2173,7 +2177,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -2200,7 +2204,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2018-11-30")
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -2236,7 +2240,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -2264,7 +2268,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2018-12-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -2306,7 +2310,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   
   exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
@@ -2332,7 +2336,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2019-01-31")
   
-  #i[is.na(i)] <- 0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -2367,7 +2371,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   
   exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
@@ -2393,7 +2397,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2019-02-28")
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -2427,7 +2431,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -2455,7 +2459,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2019-03-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -2490,7 +2494,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -2517,7 +2521,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2019-04-30")
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -2551,7 +2555,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -2578,7 +2582,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2019-05-31")
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -2613,7 +2617,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -2641,7 +2645,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2019-06-30")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -2676,7 +2680,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -2704,7 +2708,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2019-07-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -2739,7 +2743,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -2767,7 +2771,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2019-08-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -2802,7 +2806,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -2830,7 +2834,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2019-09-30")
   #View(se2019)
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -2867,7 +2871,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -2895,7 +2899,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2019-10-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -2930,7 +2934,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -2957,7 +2961,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2019-11-30")
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -2993,7 +2997,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -3021,7 +3025,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
   i$Periodo= as.Date("2019-12-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -3034,18 +3038,6 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
 } # DICIEMBRE 2019
 
 
-#View(en2019[3,17])
-#View(fe2019[3,17])
-#View(ma2019[3,17])
-#View(ab2019[3,17])
-#View(my2019[3,17])
-#View(jn2019[3,17])
-#View(jl2019[3,17])
-#View(ag2019[3,17])
-#View(se2019[3,17])
-#View(oc2019[3,17])
-#View(no2019[3,17])
-#View(di2019[3,17])
 
 ####################################################################################################################################################
 ############################################  2020 ############################################################################################
@@ -3057,8 +3049,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ ENERO 2020 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-  setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/raw data/Indicadores_Financieros/2020")
-  
+setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")  
   a<-read_xlsx("B-2401-en2020.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
   
   a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
@@ -3075,7 +3066,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   
   exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
@@ -3101,7 +3092,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2020-01-31")
   
-  #i[is.na(i)] <- 0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -3117,7 +3108,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
 {
   ############################################ FEBRERO 2020 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
-  setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/raw data/Indicadores_Financieros/2020")
+setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
   
   
   a<-read_xlsx("B-2401-fe2020.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -3136,7 +3127,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   
   exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
@@ -3162,7 +3153,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2020-02-29")
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -3178,7 +3169,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ MARZO 2020 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-  setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/raw data/Indicadores_Financieros/2020")
+setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
   
   
   a<-read_xlsx("B-2401-ma2020.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -3196,7 +3187,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -3224,7 +3215,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i$Periodo= as.Date("2020-03-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -3239,7 +3230,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ ABRIL 2020 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-  setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/raw data/Indicadores_Financieros/2020")
+setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
   
   
   
@@ -3259,7 +3250,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -3286,7 +3277,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2020-04-30")
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -3302,7 +3293,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ MAYO 2020 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-  setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/raw data/Indicadores_Financieros/2020")
+setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
   
   a<-read_xlsx("B-2401-my2020.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
   
@@ -3320,7 +3311,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -3347,7 +3338,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i<-b %>% spread(variables,valores)
   i$Periodo= as.Date("2020-05-31")
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -3363,7 +3354,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ JUNIO 2020 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-  setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/raw data/Indicadores_Financieros/2020")
+setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
   
   
   a<-read_xlsx("B-2401-jn2020.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -3382,7 +3373,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","ICBC",
-               "Total Empresas Financieras")
+               "Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -3410,7 +3401,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i$Periodo= as.Date("2020-06-30")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
@@ -3426,7 +3417,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ JULIO 2020 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-  setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/raw data/Indicadores_Financieros/2020")
+setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
   
   
   a<-read_xlsx("B-2401-jl2020.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -3445,7 +3436,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","ICBC",
-               "China","Total Empresas Financieras")
+               "China","Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -3473,7 +3464,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i$Periodo= as.Date("2020-07-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -3488,7 +3479,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ AGOSTO 2020 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-  setwd("C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/raw data/Indicadores_Financieros/2020")
+setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
   
   
   
@@ -3508,7 +3499,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
                "Pichincha","BIF","Scotiabank",
                "Citibank","Interbank","Mibanco",
                "GNB","Falabella","Santander","Ripley","Azteca","ICBC",
-              "China","Total Empresas Financieras")
+              "China","Total Banca Multiple")
   #View(a)
   #names(a)
   
@@ -3536,7 +3527,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i$Periodo= as.Date("2020-08-31")
   
   
-#  i[is.na(i)]<-0
+i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
 setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
@@ -3548,14 +3539,262 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
 } # AGOSTO 2020
 
 
-#View(en2020[3,17])
-#View(fe2020[3,17])
-#View(ma2020[3,17])
-#View(ab2020[3,17])
-#View(my2020[3,17])
-#View(jn2020[3,17])
-#View(jl2020[3,17])
-#View(ag2020[3,17])
+{
+  ############################################ SEPTIEMBRE 2020 ####################################################
+  #///////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
+  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
+  
+  
+  
+  a<-read_xlsx("B-2401-se2020.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
+  
+  a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
+  
+  options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
+  #View(a)
+  names(a)
+  
+  names(a)[10] #seleccionamos el valor 10
+  a<-a[,-10] # quitamos la columna 10 #usa dplyr como ejercicio recuerda usar "-" y select
+  
+  #names(a)
+  names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
+               "Pichincha","BIF","Scotiabank",
+               "Citibank","Interbank","Mibanco",
+               "GNB","Falabella","Santander","Ripley","Azteca","ICBC",
+               "China","Total Banca Multiple")
+  #View(a)
+  #names(a)
+  
+  exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
+  exc # va a aplicar todo excepto a la primera columna
+  a[,exc] # ven? no aparece la columns "variables"
+  a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
+  a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
+  a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
+  #View(a)
+  
+  
+  
+  a %>% gather() #%>% View() #REUNIR TODAS LAS COLUMNAS EN UNA 1RA UNO DEBAJO DE OTRA
+  a %>% gather(Bancos) #%>% View() #nombre de la 1ra columna: "Bancos"
+  a %>% gather(Bancos,valores) #%>% View() #nombre de la 2da columna: "valores"
+  a %>% gather(Bancos,valores,-variables) #%>% #View() #Agrupar por la observaciones "variables"
+  
+  b<-a %>% gather(Bancos,valores,-variables)
+  b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán columnas)
+  # según los valores
+  
+  
+  i<-b %>% spread(variables,valores)
+  i$Periodo= as.Date("2020-09-30")
+  
+  
+  i<-i[order(names(i))]
+  # Guardando la data en carpeta "dataprocesada"
+  
+  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+  saveRDS(i,file="se2020.RDS")
+  
+  se2020<-i 
+  #View(se2020)
+  
+} # SEPTIEMBRE 2020
+
+
+{
+  ############################################ OCTUBRE 2020 ####################################################
+  #///////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
+  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
+  
+  
+  
+  a<-read_xlsx("B-2401-oc2020.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
+  
+  a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
+  
+  options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
+  #View(a)
+  #names(a)
+  
+  names(a)[10] #seleccionamos el valor 10
+  a<-a[,-10] # quitamos la columna 10 #usa dplyr como ejercicio recuerda usar "-" y select
+  
+  names(a)
+  names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
+               "Pichincha","BIF","Scotiabank",
+               "Citibank","Interbank","Mibanco",
+               "GNB","Falabella","Santander","Ripley","Azteca","ICBC",
+               "China","Total Banca Multiple")
+  #View(a)
+  #names(a)
+  
+  exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
+  exc # va a aplicar todo excepto a la primera columna
+  a[,exc] # ven? no aparece la columns "variables"
+  a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
+  a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
+  a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
+  #View(a)
+  
+  
+  
+  a %>% gather() #%>% View() #REUNIR TODAS LAS COLUMNAS EN UNA 1RA UNO DEBAJO DE OTRA
+  a %>% gather(Bancos) #%>% View() #nombre de la 1ra columna: "Bancos"
+  a %>% gather(Bancos,valores) #%>% View() #nombre de la 2da columna: "valores"
+  a %>% gather(Bancos,valores,-variables) #%>% #View() #Agrupar por la observaciones "variables"
+  
+  b<-a %>% gather(Bancos,valores,-variables)
+  b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán columnas)
+  # según los valores
+  
+  
+  i<-b %>% spread(variables,valores)
+  i$Periodo= as.Date("2020-10-31")
+  
+  
+  i<-i[order(names(i))]
+  # Guardando la data en carpeta "dataprocesada"
+  
+  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+  saveRDS(i,file="oc2020.RDS")
+  
+  oc2020<-i 
+  #View(oc2020)
+  
+} # OCTUBRE 2020
+
+
+{
+  ############################################ NOVIEMBRE 2020 ####################################################
+  #///////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
+  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
+  
+  
+  
+  a<-read_xlsx("B-2401-no2020.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
+  
+  a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
+  
+  options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
+  #View(a)
+  names(a)
+  
+  names(a)[10] #seleccionamos el valor 10
+  a<-a[,-10] # quitamos la columna 10 #usa dplyr como ejercicio recuerda usar "-" y select
+  
+  #names(a)
+  names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
+               "Pichincha","BIF","Scotiabank",
+               "Citibank","Interbank","Mibanco",
+               "GNB","Falabella","Santander","Ripley","Azteca","ICBC",
+               "China","Total Banca Multiple")
+  #View(a)
+  #names(a)
+  
+  exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
+  exc # va a aplicar todo excepto a la primera columna
+  a[,exc] # ven? no aparece la columns "variables"
+  a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
+  a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
+  a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
+  #View(a)
+  
+  
+  
+  a %>% gather() #%>% View() #REUNIR TODAS LAS COLUMNAS EN UNA 1RA UNO DEBAJO DE OTRA
+  a %>% gather(Bancos) #%>% View() #nombre de la 1ra columna: "Bancos"
+  a %>% gather(Bancos,valores) #%>% View() #nombre de la 2da columna: "valores"
+  a %>% gather(Bancos,valores,-variables) #%>% #View() #Agrupar por la observaciones "variables"
+  
+  b<-a %>% gather(Bancos,valores,-variables)
+  b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán columnas)
+  # según los valores
+  
+  
+  i<-b %>% spread(variables,valores)
+  i$Periodo= as.Date("2020-11-30")
+  
+  
+  i<-i[order(names(i))]
+  # Guardando la data en carpeta "dataprocesada"
+  
+  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+  saveRDS(i,file="no2020.RDS")
+  
+  no2020<-i 
+  #View(no2020)
+  
+} # NOVIEMBRE 2020
+
+
+{
+  ############################################ DICIEMBRE 2020 ####################################################
+  #///////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
+  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
+  
+  
+  
+  a<-read_xlsx("B-2401-di2020.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
+  
+  a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
+  
+  options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
+  #View(a)
+  names(a)
+  
+  names(a)[10] #seleccionamos el valor 10
+  a<-a[,-10] # quitamos la columna 10 #usa dplyr como ejercicio recuerda usar "-" y select
+  
+  #names(a)
+  names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
+               "Pichincha","BIF","Scotiabank",
+               "Citibank","Interbank","Mibanco",
+               "GNB","Falabella","Santander","Ripley","Azteca","ICBC",
+               "China","Total Banca Multiple")
+  #View(a)
+  #names(a)
+  
+  exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
+  exc # va a aplicar todo excepto a la primera columna
+  a[,exc] # ven? no aparece la columns "variables"
+  a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
+  a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
+  a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
+  #View(a)
+  
+  
+  
+  a %>% gather() #%>% View() #REUNIR TODAS LAS COLUMNAS EN UNA 1RA UNO DEBAJO DE OTRA
+  a %>% gather(Bancos) #%>% View() #nombre de la 1ra columna: "Bancos"
+  a %>% gather(Bancos,valores) #%>% View() #nombre de la 2da columna: "valores"
+  a %>% gather(Bancos,valores,-variables) #%>% #View() #Agrupar por la observaciones "variables"
+  
+  b<-a %>% gather(Bancos,valores,-variables)
+  b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán columnas)
+  # según los valores
+  
+  
+  i<-b %>% spread(variables,valores)
+  i$Periodo= as.Date("2020-12-31")
+  
+  
+  i<-i[order(names(i))]
+  # Guardando la data en carpeta "dataprocesada"
+  
+  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+  saveRDS(i,file="di2020.RDS")
+  
+  di2020<-i 
+  #View(di2020)
+  
+} # DICIEMBRE 2020
+
+
 
 
 
