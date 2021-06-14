@@ -13,6 +13,8 @@ Riesgo de Mercado
 Riesgo Operacional
 Alcance y Participación en el mercado
 
+Presencación de la información en Google Data Studio
+https://datastudio.google.com/reporting/183a95db-c96d-4165-87e6-95e74263d4bd
 
 ## EQUIPO:
 
