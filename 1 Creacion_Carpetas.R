@@ -65,23 +65,36 @@ dir.create('./Indice_Morosidad')
 
 
 
-
-
-{
+##################################### RAW DATA ###########################################
 # CREANDO CARPETAS 2016 al 2020 PARA EL raw data
-mainDir <- "C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/Indice_Morosidad"
+mainDir <- "C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros"
 subfolder_names <- as.character(c(2016:2020)) 
 for (j in 1:length(subfolder_names)){
   dir.create(file.path(mainDir, subfolder_names[j]), showWarnings = T)
 }
 
+# CREANDO CARPETAS 2021 PARA EL raw data
+mainDir <- "C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros"
+subfolder_names <- as.character(2021) 
+dir.create(file.path(mainDir, subfolder_names))
+
+
+##################################### DATA procesada ###########################################
 # CREANDO CARPETAS 2016 al 2020 PARA LA data procesada
-mainDir <- "C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/Indice_Morosidad"
+mainDir <- "C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros"
 
 subfolder_names <- as.character(c(2016:2020)) 
 for (j in 1:length(subfolder_names)){
   dir.create(file.path(mainDir, subfolder_names[j]), showWarnings = T)
 }
-}
+
+# CREANDO CARPETAS 2021 PARA LA data procesada
+mainDir <- "C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros"
+
+subfolder_names <- as.character(2021) 
+dir.create(file.path(mainDir, subfolder_names))
+
+
+
 
 

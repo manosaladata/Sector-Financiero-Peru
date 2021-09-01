@@ -202,3 +202,60 @@ for (j in 1:length(subfolder_names)){
 
 
 
+
+##############################################      #########################################################
+##############################################      #########################################################
+############################################## 2021 #########################################################
+##############################################      #########################################################
+##############################################      #########################################################
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2021") 
+
+data_2021<- readLines(n=7)
+https://intranet2.sbs.gob.pe/estadistica/financiera/2021/Julio/B-2401-jl2021.XLS
+https://intranet2.sbs.gob.pe/estadistica/financiera/2021/Junio/B-2401-jn2021.XLS
+https://intranet2.sbs.gob.pe/estadistica/financiera/2021/Mayo/B-2401-my2021.XLS
+https://intranet2.sbs.gob.pe/estadistica/financiera/2021/Abril/B-2401-ab2021.XLS
+https://intranet2.sbs.gob.pe/estadistica/financiera/2021/Marzo/B-2401-ma2021.XLS
+https://intranet2.sbs.gob.pe/estadistica/financiera/2021/Febrero/B-2401-fe2021.XLS
+https://intranet2.sbs.gob.pe/estadistica/financiera/2021/Enero/B-2401-en2021.XLS
+
+
+for (i in data_2021)
+{
+  destfile=strsplit(i,split="/")
+  if (!file.exists(destfile[[1]][8])) {
+    download.file(i,destfile[[1]][8],mode="wb")
+  }
+  else
+    print("El archivo esta descargado")  
+} 
+
+
+
+
+#*********************************************************************************************************************************
+#*********************************************************************************************************************************
+#*********************************************************************************************************************************
+#*********************************************************************************************************************************
+#*********************************************************************************************************************************
+#*********************************************************************************************************************************
+#*********************************************************************************************************************************
+
+# DESCARGANDO BALANCE GENERAL
+subDir1 <- "data"
+subDir2 <- "Balance_General"
+dir.create(file.path(mainDir, subDir1), showWarnings = T)
+dir.create(file.path(subDir1, subDir2), showWarnings = T)
+
+
+#CAMBIANDO EL wd.
+mainDir <- "C:/Users/Jose/Desktop/Universidad/Manos a la Data/Investigacion/data/Balance_General"
+
+# CREANDO CARPETAS 2016 al 2020
+subfolder_names <- as.character(c(2016:2020)) 
+for (j in 1:length(subfolder_names)){
+  dir.create(file.path(mainDir, subfolder_names[j]), showWarnings = T)
+}
+
+
+
