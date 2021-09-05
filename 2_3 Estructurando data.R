@@ -1,4 +1,3 @@
-{
 library(xts)
 library(dygraphs)
 library(dplyr)
@@ -6,9 +5,9 @@ library(tidyr)
 library(readxl)
 library(tidyverse)
 library(stringi)
-}
 
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
 
 
 #AÑO 2016 ####
@@ -295,6 +294,44 @@ saveRDS(oc2020,file="oc2020.RDS")
 saveRDS(no2020,file="no2020.RDS")
 saveRDS(di2020,file="di2020.RDS")
 
+#AÑO 2021 ####
+{
+  df1 <- list.files(pattern = "en2021.RDS") %>%
+    map_dfr(readRDS)
+  
+  df2 <- list.files(pattern = "fe2021.RDS") %>%
+    map_dfr(readRDS)
+  
+  df3 <- list.files(pattern = "ma2021.RDS") %>%
+    map_dfr(readRDS)
+  
+  df4 <- list.files(pattern = "ab2021.RDS") %>%
+    map_dfr(readRDS)
+  
+  df5 <- list.files(pattern = "my2021.RDS") %>%
+    map_dfr(readRDS)
+  
+  df6 <- list.files(pattern = "jn2021.RDS") %>%
+    map_dfr(readRDS)
+  
+  df7 <- list.files(pattern = "jl2021.RDS") %>%
+    map_dfr(readRDS)
+}
+
+dim(df1);dim(df2);dim(df3);dim(df4);dim(df5);dim(df6);dim(df7)
+
+en2021<-df1;fe2021<-df2;ma2021<-df3;ab2021<-df4;my2021<-df5;jn2021<-df6;jl2021<-df7
+
+saveRDS(en2021,file="en2021.RDS")
+saveRDS(fe2021,file="fe2021.RDS")
+saveRDS(ma2021,file="ma2021.RDS")
+saveRDS(ab2021,file="ab2021.RDS")
+saveRDS(my2021,file="my2021.RDS")
+saveRDS(jn2021,file="jn2021.RDS")
+saveRDS(jl2021,file="jl2021.RDS")
+
+
+
 en2016_1<-en2016[,-17];fe2016_1<-fe2016[,-17];ma2016_1<-ma2016[,-17];ab2016_1<-ab2016[,-17];my2016_1<-my2016[,-17];jn2016_1<-jn2016[,-17]
 jl2016_1<-jl2016[,-17];ag2016_1<-ag2016[,-17];se2016_1<-se2016[,-17];oc2016_1<-oc2016[,-17];no2016_1<-no2016[,-17];di2016_1<-di2016[,-17]
 
@@ -314,14 +351,16 @@ names(en2017)<-variables;names(fe2017_1)<-variables;names(ma2017_1)<-variables;n
 names(en2018)<-variables;names(fe2018)<-variables;names(ma2018)<-variables;names(ab2018)<-variables;names(my2018)<-variables;names(jn2018)<-variables;names(jl2018)<-variables;names(ag2018)<-variables;names(se2018)<-variables;names(oc2018)<-variables;names(no2018)<-variables;names(di2018)<-variables
 names(en2019)<-variables;names(fe2019)<-variables;names(ma2019)<-variables;names(ab2019)<-variables;names(my2019)<-variables;names(jn2019)<-variables;names(jl2019)<-variables;names(ag2019)<-variables;names(se2019)<-variables;names(oc2019)<-variables;names(no2019)<-variables;names(di2019)<-variables
 names(en2020)<-variables;names(fe2020)<-variables;names(ma2020)<-variables;names(ab2020)<-variables;names(my2020)<-variables;names(jn2020)<-variables;names(jl2020)<-variables;names(ag2020)<-variables;names(se2020)<-variables;names(oc2020)<-variables;names(no2020)<-variables;names(di2020)<-variables
+names(en2021)<-variables;names(fe2021)<-variables;names(ma2021)<-variables;names(ab2021)<-variables;names(my2021)<-variables;names(jn2021)<-variables;names(jl2021)<-variables
 
+banca_multiple<-rbind(en2016_1,fe2016_1,ma2016_1,ab2016_1,my2016_1,jn2016_1,jl2016_1,ag2016_1,se2016_1,oc2016_1,no2016_1,di2016_1,
+                      en2017,fe2017_1,ma2017_1,ab2017_1,my2017_1,jn2017_1,jl2017_1,ag2017_1,se2017_1,oc2017_1,no2017,di2017,
+                      en2018,fe2018,ma2018,ab2018,my2018,jn2018,jl2018,ag2018,se2018,oc2018,no2018,di2018,
+                      en2019,fe2019,ma2019,ab2019,my2019,jn2019,jl2019,ag2019,se2019,oc2019,no2019,di2019,
+                      en2020,fe2020,ma2020,ab2020,my2020,jn2020,jl2020,ag2020,se2020,oc2020,no2020,di2020,
+                      en2021,fe2021,ma2021,ab2021,my2021,jn2021,jl2021)
 
-banca_multiple<-rbind(en2016_1,fe2016_1,ma2016_1,ab2016_1,my2016_1,jn2016_1,jl2016_1,ag2016_1,se2016_1,oc2016_1,no2016_1,di2016_1,en2017,fe2017_1,ma2017_1,ab2017_1,my2017_1,jn2017_1,
-                     jl2017_1,ag2017_1,se2017_1,oc2017_1,no2017,di2017,en2018,fe2018,ma2018,ab2018,my2018,jn2018,jl2018,ag2018,se2018,oc2018,
-                     no2018,di2018,en2020,fe2020,ma2020,ab2020,my2020,jn2020,jl2020,ag2020,se2020,oc2020,no2020,di2020,en2020,fe2020,ma2020,
-                     ab2020,my2020,jn2020,jl2020,ag2020,se2020,oc2020,no2020,di2020)
-
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
 
 banca_multiple<-as.data.frame(banca_multiple)
 total_banca_multiple<-banca_multiple[banca_multiple$Bancos=="Total Banca Multiple",]

@@ -1,10 +1,10 @@
 
 
-{
+
 library(dplyr)
 library(tidyr)
 library(readxl)
-} # LIBRERÍAS
+ # LIBRERÍAS
 
 ################################################### 2016 ##############################################################
 
@@ -60,7 +60,7 @@ i<-i[order(names(i))]
 
 # Guardando la data en carpeta "dataprocesada"
 
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
 saveRDS(i,file="en2016.RDS")
 
 en2016<-i
@@ -72,7 +72,7 @@ en2016<-i
 {
 ############################################ FEBRERO 2016 ####################################################
 #///////////////////////////////////////////////////////////////////////////////////////////////////////////
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2016")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2016")
 
 
 a<-read_xls("B-2401-fe2016.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -121,7 +121,7 @@ i<-i[order(names(i))]
 
 # Guardando la data en carpeta "dataprocesada"
 
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
 saveRDS(i,file="fe2016.RDS")
 
 fe2016<-i
@@ -134,7 +134,7 @@ fe2016<-i
 ############################################ MARZO 2016 ####################################################
 #///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2016")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2016")
 
 
 a<-read_xls("B-2401-ma2016.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -184,7 +184,7 @@ i$Periodo= as.Date("2016-03-31")
 i<-i[order(names(i))]
 # Guardando la data en carpeta "dataprocesada"
 
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
 saveRDS(i,file="ma2016.RDS")
 
 ma2016<-i 
@@ -197,7 +197,7 @@ ma2016<-i
 ############################################ ABRIL 2016 ####################################################
 #///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2016")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2016")
 
 
 
@@ -248,7 +248,7 @@ i<-i[order(names(i))]
 
 # Guardando la data en carpeta "dataprocesada"
 
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
 saveRDS(i,file="ab2016.RDS")
 
 ab2016=i 
@@ -260,7 +260,7 @@ ab2016=i
 ############################################ MAYO 2016 ####################################################
 #///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2016")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2016")
 
 a<-read_xls("B-2401-my2016.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
 ##View(a)
@@ -311,7 +311,7 @@ i<-i[order(names(i))]
 
 # Guardando la data en carpeta "dataprocesada"
 
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
 saveRDS(i,file="my2016.RDS")
 
 my2016<-i
@@ -323,7 +323,7 @@ my2016<-i
 ############################################ JUNIO 2016 ####################################################
 #///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2016")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2016")
 
 
 a<-read_xls("B-2401-jn2016.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -374,7 +374,7 @@ i<-i[order(names(i))]
 
 # Guardando la data en carpeta "dataprocesada"
 
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
 saveRDS(i,file="jn2016.RDS")
 
 jn2016<-i 
@@ -386,7 +386,7 @@ jn2016<-i
 ############################################ JULIO 2016 ####################################################
 #///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2016")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2016")
 
 
 a<-read_xls("B-2401-jl2016.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -435,7 +435,7 @@ i$Periodo= as.Date("2016-07-31")
 i<-i[order(names(i))]
 # Guardando la data en carpeta "dataprocesada"
 
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
 saveRDS(i,file="jl2016.RDS")
 
 jl2016<-i
@@ -449,7 +449,7 @@ jl2016<-i
 ############################################ AGOSTO 2016 ####################################################
 #///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2016")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2016")
 
 
 
@@ -500,7 +500,7 @@ i$Periodo= as.Date("2016-08-31")
 i<-i[order(names(i))]
 # Guardando la data en carpeta "dataprocesada"
 
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
 saveRDS(i,file="ag2016.RDS")
 
 ag2016<-i 
@@ -513,7 +513,7 @@ ag2016<-i
 ############################################ SETIEMBRE 2016 ####################################################
 #///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2016")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2016")
 
 
 a<-read_xls("B-2401-se2016.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -564,7 +564,7 @@ i$Periodo= as.Date("2016-09-30")
 i<-i[order(names(i))]
 # Guardando la data en carpeta "dataprocesada"
 
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
 saveRDS(i,file="se2016.RDS")
 
 se2016<-i
@@ -581,7 +581,7 @@ se2016<-i
 ############################################ OCTUBRE 2016 ####################################################
 #///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2016")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2016")
 
 
 
@@ -632,7 +632,7 @@ i$Periodo= as.Date("2016-10-31")
 i<-i[order(names(i))]
 # Guardando la data en carpeta "dataprocesada"
 
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
 saveRDS(i,file="oc2016.RDS")
 
 oc2016<-i 
@@ -646,7 +646,7 @@ oc2016<-i
 ############################################ NOVIEMBRE 2016 ####################################################
 #///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2016")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2016")
 
 a<-read_xls("B-2401-no2016.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
 
@@ -696,7 +696,7 @@ i<-i[order(names(i))]
 
 # Guardando la data en carpeta "dataprocesada"
 
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
 saveRDS(i,file="no2016.RDS")
 
 no2016<-i
@@ -707,7 +707,7 @@ no2016<-i
 ############################################ DICIEMBRE 2016 ####################################################
 #///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2016")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2016")
 
   
 a<-read_xlsx("B-2401-di2016.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -757,7 +757,7 @@ i$Periodo= as.Date("2016-12-31")
 i<-i[order(names(i))]
 # Guardando la data en carpeta "dataprocesada"
 
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
 saveRDS(i,file="di2016.RDS")
 
 di2016<-i
@@ -776,7 +776,7 @@ di2016<-i
 ############################################ ENERO 2017 ####################################################
 #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2017")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2017")
 
 a<-read_xls("B-2401-en2017.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
   
@@ -824,7 +824,7 @@ i<-i[order(names(i))]
   
 # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
 saveRDS(i,file="en2017.RDS")
 
 en2017<-i
@@ -836,7 +836,7 @@ en2017<-i
 {
   ############################################ FEBRERO 2017 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
-  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2017")
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2017")
   
   
   a<-read_xlsx("B-2401-fe2017.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -885,7 +885,7 @@ en2017<-i
   
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="fe2017.RDS")
   
   fe2017<-i
@@ -897,7 +897,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ MARZO 2017 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2017")
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2017")
   
   
   a<-read_xls("B-2401-ma2017.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -947,7 +947,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="ma2017.RDS")
   
   ma2017<-i 
@@ -959,7 +959,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ ABRIL 2017 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2017")
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2017")
   
   
   
@@ -1010,7 +1010,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="ab2017.RDS")
   
   ab2017=i 
@@ -1022,7 +1022,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ MAYO 2017 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2017")
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2017")
   
   a<-read_xlsx("B-2401-my2017.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
   
@@ -1071,7 +1071,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="my2017.RDS")
   
   my2017<-i
@@ -1083,7 +1083,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ JUNIO 2017 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2017")
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2017")
   
   
   a<-read_xlsx("B-2401-jn2017.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -1134,7 +1134,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="jn2017.RDS")
   
   jn2017<-i 
@@ -1146,7 +1146,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ JULIO 2017 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2017")
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2017")
   
   
   a<-read_xls("B-2401-jl2017.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -1196,7 +1196,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="jl2017.RDS")
   
   jl2017<-i
@@ -1208,7 +1208,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ AGOSTO 2017 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2017")
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2017")
   
   
   
@@ -1259,7 +1259,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="ag2017.RDS")
   
   ag2017<-i 
@@ -1272,7 +1272,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ SETIEMBRE 2017 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2017")
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2017")
   
   
   a<-read_xls("B-2401-se2017.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -1322,7 +1322,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="se2017.RDS")
   
   se2017<-i
@@ -1336,7 +1336,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ OCTUBRE 2017 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2017")
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2017")
   
   
   
@@ -1387,7 +1387,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="oc2017.RDS")
   
   oc2017<-i 
@@ -1401,7 +1401,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ NOVIEMBRE 2017 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2017")
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2017")
   
   a<-read_xls("B-2401-no2017.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
   
@@ -1450,7 +1450,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="no2017.RDS")
   
   no2017<-i
@@ -1463,7 +1463,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ DICIEMBRE 2017 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2017")
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2017")
   
   
   a<-read_xlsx("B-2401-di2017.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -1513,7 +1513,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="di2017.RDS")
   
   di2017<-i
@@ -1534,7 +1534,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ ENERO 2018 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2018")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2018")
   
   a<-read_xlsx("B-2401-en2018.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
   
@@ -1582,7 +1582,7 @@ i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="en2018.RDS")
   
   en2018<-i
@@ -1594,7 +1594,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
 {
   ############################################ FEBRERO 2018 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2018")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2018")
   
   
   a<-read_xlsx("B-2401-fe2018.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -1643,7 +1643,7 @@ i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="fe2018.RDS")
   
   fe2018<-i
@@ -1655,7 +1655,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ MARZO 2018 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2018")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2018")
   
   
   a<-read_xlsx("B-2401-ma2018.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -1705,7 +1705,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
 i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="ma2018.RDS")
   
   ma2018<-i 
@@ -1717,7 +1717,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ ABRIL 2018 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2018")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2018")
   
   
   
@@ -1768,7 +1768,7 @@ i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="ab2018.RDS")
   
   ab2018<-i 
@@ -1780,7 +1780,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ MAYO 2018 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2018")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2018")
   
   a<-read_xlsx("B-2401-my2018.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
   
@@ -1829,7 +1829,7 @@ i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="my2018.RDS")
   
   my2018<-i
@@ -1841,7 +1841,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ JUNIO 2018 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2018")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2018")
   
   
   a<-read_xlsx("B-2401-jn2018.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -1892,7 +1892,7 @@ i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="jn2018.RDS")
   
   jn2018<-i 
@@ -1904,7 +1904,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ JULIO 2018 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2018")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2018")
   
   
   a<-read_xlsx("B-2401-jl2018.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -1954,7 +1954,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
 i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="jl2018.RDS")
   
   jl2018<-i
@@ -1966,7 +1966,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ AGOSTO 2018 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2018")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2018")
   
   
   
@@ -2017,7 +2017,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
 i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="ag2018.RDS")
   
   ag2018<-i 
@@ -2030,7 +2030,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ SETIEMBRE 2018 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2018")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2018")
   
   
   a<-read_xlsx("B-2401-se2018.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -2080,7 +2080,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
 i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="se2018.RDS")
   
   se2018<-i
@@ -2094,7 +2094,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ OCTUBRE 2018 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2018")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2018")
   
   
   
@@ -2145,7 +2145,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
 i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="oc2018.RDS")
   
   oc2018<-i 
@@ -2159,7 +2159,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ NOVIEMBRE 2018 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2018")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2018")
   
   a<-read_xlsx("B-2401-no2018.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
   
@@ -2208,7 +2208,7 @@ i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="no2018.RDS")
   
   no2018<-i
@@ -2221,7 +2221,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ DICIEMBRE 2018 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2018")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2018")
   
   
   a<-read_xlsx("B-2401-di2018.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -2271,7 +2271,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
 i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="di2018.RDS")
   
   di2018<-i
@@ -2292,7 +2292,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ ENERO 2019 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2019")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2019")
   
   a<-read_xlsx("B-2401-en2019.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
   
@@ -2340,7 +2340,7 @@ i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="en2019.RDS")
   
   en2019<-i
@@ -2352,7 +2352,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
 {
   ############################################ FEBRERO 2019 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2019")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2019")
   
   
   a<-read_xlsx("B-2401-fe2019.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -2401,7 +2401,7 @@ i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="fe2019.RDS")
   
   fe2019<-i
@@ -2413,7 +2413,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ MARZO 2019 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2019")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2019")
   
   
   a<-read_xlsx("B-2401-ma2019.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -2462,7 +2462,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
 i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="ma2019.RDS")
   
   ma2019<-i 
@@ -2474,7 +2474,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ ABRIL 2019 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2019")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2019")
   
   
   
@@ -2525,7 +2525,7 @@ i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="ab2019.RDS")
   
   ab2019<-i 
@@ -2537,7 +2537,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ MAYO 2019 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2019")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2019")
   
   a<-read_xlsx("B-2401-my2019.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
   
@@ -2586,7 +2586,7 @@ i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="my2019.RDS")
   
   my2019<-i
@@ -2598,7 +2598,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ JUNIO 2019 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2019")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2019")
   
   
   a<-read_xlsx("B-2401-jn2019.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -2649,7 +2649,7 @@ i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="jn2019.RDS")
   
   jn2019<-i 
@@ -2661,7 +2661,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ JULIO 2019 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2019")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2019")
   
   
   a<-read_xlsx("B-2401-jl2019.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -2711,7 +2711,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
 i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="jl2019.RDS")
   
   jl2019<-i
@@ -2723,7 +2723,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ AGOSTO 2019 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2019")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2019")
   
   
   
@@ -2774,7 +2774,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
 i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="ag2019.RDS")
   
   ag2019<-i 
@@ -2787,7 +2787,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ SETIEMBRE 2019 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2019")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2019")
   
   
   a<-read_xlsx("B-2401-se2019.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -2837,7 +2837,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
 i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="se2019.RDS")
   
   se2019<-i
@@ -2851,7 +2851,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ OCTUBRE 2019 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2019")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2019")
   
   
   
@@ -2902,7 +2902,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
 i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="oc2019.RDS")
   
   oc2019<-i 
@@ -2916,7 +2916,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ NOVIEMBRE 2019 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2019")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2019")
   
   a<-read_xlsx("B-2401-no2019.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
   
@@ -2965,7 +2965,7 @@ i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="no2019.RDS")
   
   no2019<-i
@@ -2978,7 +2978,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ DICIEMBRE 2019 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2019")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2019")
   
   
   a<-read_xlsx("B-2401-di2019.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -3028,7 +3028,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
 i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="di2019.RDS")
   
   di2019<-i
@@ -3049,7 +3049,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ ENERO 2020 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")  
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")  
   a<-read_xlsx("B-2401-en2020.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
   
   a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
@@ -3096,7 +3096,7 @@ i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="en2020.RDS")
   
   en2020<-i
@@ -3108,7 +3108,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
 {
   ############################################ FEBRERO 2020 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
   
   
   a<-read_xlsx("B-2401-fe2020.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -3157,7 +3157,7 @@ i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="fe2020.RDS")
   
   fe2020<-i
@@ -3169,7 +3169,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ MARZO 2020 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
   
   
   a<-read_xlsx("B-2401-ma2020.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -3218,7 +3218,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
 i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="ma2020.RDS")
   
   ma2020<-i 
@@ -3230,7 +3230,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ ABRIL 2020 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
   
   
   
@@ -3281,7 +3281,7 @@ i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="ab2020.RDS")
   
   ab2020<-i 
@@ -3293,7 +3293,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ MAYO 2020 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
   
   a<-read_xlsx("B-2401-my2020.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
   
@@ -3342,7 +3342,7 @@ i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="my2020.RDS")
   
   my2020<-i
@@ -3354,7 +3354,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ JUNIO 2020 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
   
   
   a<-read_xlsx("B-2401-jn2020.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -3405,7 +3405,7 @@ i<-i[order(names(i))]
   
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="jn2020.RDS")
   
   jn2020<-i 
@@ -3417,7 +3417,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ JULIO 2020 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
   
   
   a<-read_xlsx("B-2401-jl2020.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
@@ -3467,7 +3467,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
 i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="jl2020.RDS")
   
   jl2020<-i
@@ -3479,7 +3479,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ AGOSTO 2020 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
   
   
   
@@ -3530,7 +3530,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Infor
 i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="ag2020.RDS")
   
   ag2020<-i 
@@ -3543,7 +3543,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ SEPTIEMBRE 2020 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
   
   
   
@@ -3594,7 +3594,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="se2020.RDS")
   
   se2020<-i 
@@ -3607,7 +3607,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ OCTUBRE 2020 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
   
   
   
@@ -3658,7 +3658,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="oc2020.RDS")
   
   oc2020<-i 
@@ -3671,7 +3671,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ NOVIEMBRE 2020 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
   
   
   
@@ -3722,7 +3722,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="no2020.RDS")
   
   no2020<-i 
@@ -3735,7 +3735,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   ############################################ DICIEMBRE 2020 ####################################################
   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2020")
   
   
   
@@ -3786,7 +3786,7 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
   i<-i[order(names(i))]
   # Guardando la data en carpeta "dataprocesada"
   
-  setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
   saveRDS(i,file="di2020.RDS")
   
   di2020<-i 
@@ -3802,3 +3802,753 @@ setwd("C:/Users/Jose/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/
 
 
 
+
+
+############################################  2021 ############################################################################################
+####################################################################################################################################################
+
+
+
+{
+  ############################################ ENERO 2021 ####################################################
+  #///////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2021")  
+  a<-read_xlsx("B-2401-en2021.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
+  
+  a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
+  
+  options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
+  #View(a)
+  #names(a)
+  
+  #names(a)[10] #seleccionamos el valor 10
+  a<-a[,-10] # quitamos la columna 10 #usa dplyr como ejercicio recuerda usar "-" y select
+  
+  
+  names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
+               "Pichincha","BIF","Scotiabank",
+               "Citibank","Interbank","Mibanco",
+               "GNB","Falabella","Santander","Ripley","Azteca","ICBC",
+               "China","Total Banca Multiple")
+  #View(a)
+  
+  exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
+  exc # va a aplicar todo excepto a la primera columna
+  a[,exc] # ven? no aparece la columns "variables"
+  a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
+  a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
+  a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
+  #View(a)
+  
+  
+  
+  a %>% gather() #%>% View() #REUNIR TODAS LAS COLUMNAS EN UNA 1RA UNO DEBAJO DE OTRA
+  a %>% gather(Bancos) #%>% View() #nombre de la 1ra columna: "Bancos"
+  a %>% gather(Bancos,valores) #%>% View() #nombre de la 2da columna: "valores"
+  a %>% gather(Bancos,valores,-variables) #%>% #View() #Agrupar por la observaciones "variables"
+  
+  b<-a %>% gather(Bancos,valores,-variables)
+  b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán columnas)
+  # según los valores
+  
+  
+  i<-b %>% spread(variables,valores)
+  i$Periodo= as.Date("2021-01-31")
+  
+  i<-i[order(names(i))]
+  
+  # Guardando la data en carpeta "dataprocesada"
+  
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+  saveRDS(i,file="en2021.RDS")
+  
+  en2021<-i
+  
+  
+} # ENERO 2021
+
+
+{
+  ############################################ FEBRERO 2021 ####################################################
+  #///////////////////////////////////////////////////////////////////////////////////////////////////////////
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2021")
+  
+  
+  a<-read_xlsx("B-2401-fe2021.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
+  
+  a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
+  
+  options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
+  #View(a)
+  #names(a)
+  
+  names(a)[10] #seleccionamos el valor 10
+  a<-a[,-10] # quitamos la columna 10 #usa dplyr como ejercicio recuerda usar "-" y select
+  
+  
+  names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
+               "Pichincha","BIF","Scotiabank",
+               "Citibank","Interbank","Mibanco",
+               "GNB","Falabella","Santander","Ripley","Azteca","ICBC",
+               "China","Total Banca Multiple")
+  #View(a)
+  
+  exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
+  exc # va a aplicar todo excepto a la primera columna
+  a[,exc] # ven? no aparece la columns "variables"
+  a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
+  a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
+  a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
+  #View(a)
+  
+  
+  
+  a %>% gather() #%>% View() #REUNIR TODAS LAS COLUMNAS EN UNA 1RA UNO DEBAJO DE OTRA
+  a %>% gather(Bancos) #%>% View() #nombre de la 1ra columna: "Bancos"
+  a %>% gather(Bancos,valores) #%>% View() #nombre de la 2da columna: "valores"
+  a %>% gather(Bancos,valores,-variables) #%>% #View() #Agrupar por la observaciones "variables"
+  
+  b<-a %>% gather(Bancos,valores,-variables)
+  b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán columnas)
+  # según los valores
+  
+  
+  i<-b %>% spread(variables,valores)
+  i$Periodo= as.Date("2021-02-28")
+  
+  i<-i[order(names(i))]
+  
+  # Guardando la data en carpeta "dataprocesada"
+  
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+  saveRDS(i,file="fe2021.RDS")
+  
+  fe2021<-i
+  
+} # FEBRERO 2021
+
+
+{
+  ############################################ MARZO 2021 ####################################################
+  #///////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2021")
+  
+  
+  a<-read_xlsx("B-2401-ma2021.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
+  
+  a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
+  
+  options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
+  #View(a)
+  #names(a)
+  
+  a<-a[,-10] # quitamos la columna 10 #usa dplyr como ejercicio recuerda usar "-" y select
+  
+  #names(a)
+  names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
+               "Pichincha","BIF","Scotiabank",
+               "Citibank","Interbank","Mibanco",
+               "GNB","Falabella","Santander","Ripley","Azteca","ICBC","China",
+               "Total Banca Multiple")
+  #View(a)
+  #names(a)
+  
+  exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
+  exc # va a aplicar todo excepto a la primera columna
+  a[,exc] # ven? no aparece la columns "variables"
+  a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
+  a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
+  a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
+  #View(a)
+  
+  
+  
+  a %>% gather() #%>% View() #REUNIR TODAS LAS COLUMNAS EN UNA 1RA UNO DEBAJO DE OTRA
+  a %>% gather(Bancos) #%>% View() #nombre de la 1ra columna: "Bancos"
+  a %>% gather(Bancos,valores) #%>% View() #nombre de la 2da columna: "valores"
+  a %>% gather(Bancos,valores,-variables) #%>% #View() #Agrupar por la observaciones "variables"
+  
+  b<-a %>% gather(Bancos,valores,-variables)
+  b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán columnas)
+  # según los valores
+  
+  
+  i<-b %>% spread(variables,valores)
+  i$Periodo= as.Date("2021-03-31")
+  
+  
+  i<-i[order(names(i))]
+  # Guardando la data en carpeta "dataprocesada"
+  
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+  saveRDS(i,file="ma2021.RDS")
+  
+  ma2021<-i 
+  
+} # MARZO 2021
+
+
+{
+  ############################################ ABRIL 2021 ####################################################
+  #///////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2021")
+  
+  
+  
+  a<-read_xlsx("B-2401-ab2021.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
+  
+  a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
+  
+  options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
+  #View(a)
+  #names(a)
+  
+  names(a)[10] #seleccionamos el valor 10
+  a<-a[,-10] # quitamos la columna 10 #usa dplyr como ejercicio recuerda usar "-" y select
+  
+  #names(a)
+  names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
+               "Pichincha","BIF","Scotiabank",
+               "Citibank","Interbank","Mibanco",
+               "GNB","Falabella","Santander","Ripley","Azteca","ICBC","China","Total Banca Multiple")
+  
+  #View(a)
+  #names(a)
+  
+  exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
+  exc # va a aplicar todo excepto a la primera columna
+  a[,exc] # ven? no aparece la columns "variables"
+  a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
+  a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
+  a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
+  #View(a)
+  
+  
+  
+  a %>% gather() #%>% View() #REUNIR TODAS LAS COLUMNAS EN UNA 1RA UNO DEBAJO DE OTRA
+  a %>% gather(Bancos) #%>% View() #nombre de la 1ra columna: "Bancos"
+  a %>% gather(Bancos,valores) #%>% View() #nombre de la 2da columna: "valores"
+  a %>% gather(Bancos,valores,-variables) #%>% #View() #Agrupar por la observaciones "variables"
+  
+  b<-a %>% gather(Bancos,valores,-variables)
+  b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán columnas)
+  # según los valores
+  
+  
+  i<-b %>% spread(variables,valores)
+  i$Periodo= as.Date("2021-04-30")
+  
+  i<-i[order(names(i))]
+  
+  # Guardando la data en carpeta "dataprocesada"
+  
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+  saveRDS(i,file="ab2021.RDS")
+  
+  ab2021<-i 
+  #View(ab2021)
+} # ABRIL 2021
+
+
+{
+  ############################################ MAYO 2021 ####################################################
+  #///////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2021")
+  
+  a<-read_xlsx("B-2401-my2021.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
+  
+  a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
+  
+  options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
+  #View(a)
+  names(a)
+  
+  names(a)[10] #seleccionamos el valor 10
+  a<-a[,-10] # quitamos la columna 10 #usa dplyr como ejercicio recuerda usar "-" y select
+  
+  #names(a)
+  names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
+               "Pichincha","BIF","Scotiabank",
+               "Citibank","Interbank","Mibanco",
+               "GNB","Falabella","Santander","Ripley","Azteca","ICBC","China","Total Banca Multiple")
+  #View(a)
+  #names(a)
+  
+  exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
+  exc # va a aplicar todo excepto a la primera columna
+  a[,exc] # ven? no aparece la columns "variables"
+  a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
+  a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
+  a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
+  #View(a)
+  
+  
+  
+  a %>% gather() #%>% View() #REUNIR TODAS LAS COLUMNAS EN UNA 1RA UNO DEBAJO DE OTRA
+  a %>% gather(Bancos) #%>% View() #nombre de la 1ra columna: "Bancos"
+  a %>% gather(Bancos,valores) #%>% View() #nombre de la 2da columna: "valores"
+  a %>% gather(Bancos,valores,-variables) #%>% #View() #Agrupar por la observaciones "variables"
+  
+  b<-a %>% gather(Bancos,valores,-variables)
+  b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán columnas)
+  # según los valores
+  
+  
+  i<-b %>% spread(variables,valores)
+  i$Periodo= as.Date("2021-05-31")
+  
+  i<-i[order(names(i))]
+  
+  # Guardando la data en carpeta "dataprocesada"
+  
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+  saveRDS(i,file="my2021.RDS")
+  
+  my2021<-i
+  #View(my2021)
+} # MAYO 2021
+
+
+{
+  ############################################ JUNIO 2021 ####################################################
+  #///////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2021")
+  
+  
+  a<-read_xlsx("B-2401-jn2021.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
+  
+  a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
+  
+  options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
+  #View(a)
+  names(a)
+  
+  names(a)[10] #seleccionamos el valor 10
+  a<-a[,-10] # quitamos la columna 10 #usa dplyr como ejercicio recuerda usar "-" y select
+  
+  #names(a)
+  names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
+               "Pichincha","BIF","Scotiabank",
+               "Citibank","Interbank","Mibanco",
+               "GNB","Falabella","Santander","Ripley","Azteca","ICBC","China","Total Banca Multiple")
+  #View(a)
+  #names(a)
+  
+  exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
+  exc # va a aplicar todo excepto a la primera columna
+  a[,exc] # ven? no aparece la columns "variables"
+  a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
+  a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
+  a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
+  #View(a)
+  
+  
+  
+  a %>% gather() #%>% View() #REUNIR TODAS LAS COLUMNAS EN UNA 1RA UNO DEBAJO DE OTRA
+  a %>% gather(Bancos) #%>% View() #nombre de la 1ra columna: "Bancos"
+  a %>% gather(Bancos,valores) #%>% View() #nombre de la 2da columna: "valores"
+  a %>% gather(Bancos,valores,-variables) #%>% #View() #Agrupar por la observaciones "variables"
+  
+  b<-a %>% gather(Bancos,valores,-variables)
+  b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán columnas)
+  # según los valores
+  
+  
+  i<-b %>% spread(variables,valores)
+  i$Periodo= as.Date("2021-06-30")
+  
+  
+  i<-i[order(names(i))]
+  
+  # Guardando la data en carpeta "dataprocesada"
+  
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+  saveRDS(i,file="jn2021.RDS")
+  
+  jn2021<-i 
+  #View(jn2021)
+} # JUNIO 2021
+
+
+{
+  ############################################ JULIO 2021 ####################################################
+  #///////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2021")
+  
+  
+  a<-read_xlsx("B-2401-jl2021.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
+  
+  a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
+  
+  options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
+  #View(a)
+  #names(a)
+  
+  names(a)[10] #seleccionamos el valor 10
+  a<-a[,-10] # quitamos la columna 10 #usa dplyr como ejercicio recuerda usar "-" y select
+  
+  #names(a)
+  names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
+               "Pichincha","BIF","Scotiabank",
+               "Citibank","Interbank","Mibanco",
+               "GNB","Falabella","Santander","Ripley","Azteca","ICBC","China","Total Banca Multiple")
+  #View(a)
+  #names(a)
+  
+  exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
+  exc # va a aplicar todo excepto a la primera columna
+  a[,exc] # ven? no aparece la columns "variables"
+  a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
+  a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
+  a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
+  #View(a)
+  
+  
+  
+  a %>% gather() #%>% View() #REUNIR TODAS LAS COLUMNAS EN UNA 1RA UNO DEBAJO DE OTRA
+  a %>% gather(Bancos) #%>% View() #nombre de la 1ra columna: "Bancos"
+  a %>% gather(Bancos,valores) #%>% View() #nombre de la 2da columna: "valores"
+  a %>% gather(Bancos,valores,-variables) #%>% #View() #Agrupar por la observaciones "variables"
+  
+  b<-a %>% gather(Bancos,valores,-variables)
+  b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán columnas)
+  # según los valores
+  
+  
+  i<-b %>% spread(variables,valores)
+  i$Periodo= as.Date("2021-07-31")
+  
+  
+  i<-i[order(names(i))]
+  # Guardando la data en carpeta "dataprocesada"
+  
+  setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+  saveRDS(i,file="jl2021.RDS")
+  
+  jl2021<-i
+  #View(jl2021)
+} # JULIO 2021
+
+
+# {
+#   ############################################ AGOSTO 2021 ####################################################
+#   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
+#   
+#   setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2021")
+#   
+#   
+#   
+#   a<-read_xlsx("B-2401-ag2021.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
+#   
+#   a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
+#   
+#   options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
+#   #View(a)
+#   names(a)
+#   
+#   names(a)[10] #seleccionamos el valor 10
+#   a<-a[,-10] # quitamos la columna 10 #usa dplyr como ejercicio recuerda usar "-" y select
+#   
+#   #names(a)
+#   names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
+#                "Pichincha","BIF","Scotiabank",
+#                "Citibank","Interbank","Mibanco",
+#                "GNB","Falabella","Santander","Ripley","Azteca","ICBC","China","Total Banca Multiple")
+#   #View(a)
+#   #names(a)
+#   
+#   exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
+#   exc # va a aplicar todo excepto a la primera columna
+#   a[,exc] # ven? no aparece la columns "variables"
+#   a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
+#   a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
+#   a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
+#   #View(a)
+#   
+#   
+#   
+#   a %>% gather() #%>% View() #REUNIR TODAS LAS COLUMNAS EN UNA 1RA UNO DEBAJO DE OTRA
+#   a %>% gather(Bancos) #%>% View() #nombre de la 1ra columna: "Bancos"
+#   a %>% gather(Bancos,valores) #%>% View() #nombre de la 2da columna: "valores"
+#   a %>% gather(Bancos,valores,-variables) #%>% #View() #Agrupar por la observaciones "variables"
+#   
+#   b<-a %>% gather(Bancos,valores,-variables)
+#   b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán columnas)
+#   # según los valores
+#   
+#   
+#   i<-b %>% spread(variables,valores)
+#   i$Periodo= as.Date("2021-08-31")
+#   
+#   
+#   i<-i[order(names(i))]
+#   # Guardando la data en carpeta "dataprocesada"
+#   
+#   setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+#   saveRDS(i,file="ag2021.RDS")
+#   
+#   ag2021<-i 
+#   #View(ag2021)
+#   
+# } # AGOSTO 2021
+# 
+# 
+# {
+#   ############################################ SEPTIEMBRE 2021 ####################################################
+#   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
+#   
+#   setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2021")
+#   
+#   
+#   
+#   a<-read_xlsx("B-2401-se2021.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
+#   
+#   a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
+#   
+#   options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
+#   #View(a)
+#   names(a)
+#   
+#   names(a)[10] #seleccionamos el valor 10
+#   a<-a[,-10] # quitamos la columna 10 #usa dplyr como ejercicio recuerda usar "-" y select
+#   
+#   #names(a)
+#   names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
+#                "Pichincha","BIF","Scotiabank",
+#                "Citibank","Interbank","Mibanco",
+#                "GNB","Falabella","Santander","Ripley","Azteca","ICBC","China","Total Banca Multiple")
+# 
+#   #View(a)
+#   #names(a)
+#   
+#   exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
+#   exc # va a aplicar todo excepto a la primera columna
+#   a[,exc] # ven? no aparece la columns "variables"
+#   a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
+#   a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
+#   a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
+#   #View(a)
+#   
+#   
+#   
+#   a %>% gather() #%>% View() #REUNIR TODAS LAS COLUMNAS EN UNA 1RA UNO DEBAJO DE OTRA
+#   a %>% gather(Bancos) #%>% View() #nombre de la 1ra columna: "Bancos"
+#   a %>% gather(Bancos,valores) #%>% View() #nombre de la 2da columna: "valores"
+#   a %>% gather(Bancos,valores,-variables) #%>% #View() #Agrupar por la observaciones "variables"
+#   
+#   b<-a %>% gather(Bancos,valores,-variables)
+#   b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán columnas)
+#   # según los valores
+#   
+#   
+#   i<-b %>% spread(variables,valores)
+#   i$Periodo= as.Date("2021-09-30")
+#   
+#   
+#   i<-i[order(names(i))]
+#   # Guardando la data en carpeta "dataprocesada"
+#   
+#   setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+#   saveRDS(i,file="se2021.RDS")
+#   
+#   se2021<-i 
+#   #View(se2021)
+#   
+# } # SEPTIEMBRE 2021
+# 
+# 
+# {
+#   ############################################ OCTUBRE 2021 ####################################################
+#   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
+#   
+#   setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2021")
+#   
+#   
+#   
+#   a<-read_xlsx("B-2401-oc2021.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
+#   
+#   a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
+#   
+#   options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
+#   #View(a)
+#   #names(a)
+#   
+#   names(a)[10] #seleccionamos el valor 10
+#   a<-a[,-10] # quitamos la columna 10 #usa dplyr como ejercicio recuerda usar "-" y select
+#   
+#   names(a)
+#   names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
+#                "Pichincha","BIF","Scotiabank",
+#                "Citibank","Interbank","Mibanco",
+#                "GNB","Falabella","Santander","Ripley","Azteca","ICBC","China","Total Banca Multiple")
+#   #View(a)
+#   #names(a)
+#   
+#   exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
+#   exc # va a aplicar todo excepto a la primera columna
+#   a[,exc] # ven? no aparece la columns "variables"
+#   a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
+#   a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
+#   a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
+#   #View(a)
+#   
+#   
+#   
+#   a %>% gather() #%>% View() #REUNIR TODAS LAS COLUMNAS EN UNA 1RA UNO DEBAJO DE OTRA
+#   a %>% gather(Bancos) #%>% View() #nombre de la 1ra columna: "Bancos"
+#   a %>% gather(Bancos,valores) #%>% View() #nombre de la 2da columna: "valores"
+#   a %>% gather(Bancos,valores,-variables) #%>% #View() #Agrupar por la observaciones "variables"
+#   
+#   b<-a %>% gather(Bancos,valores,-variables)
+#   b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán columnas)
+#   # según los valores
+#   
+#   
+#   i<-b %>% spread(variables,valores)
+#   i$Periodo= as.Date("2021-10-31")
+#   
+#   
+#   i<-i[order(names(i))]
+#   # Guardando la data en carpeta "dataprocesada"
+#   
+#   setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+#   saveRDS(i,file="oc2021.RDS")
+#   
+#   oc2021<-i 
+#   #View(oc2021)
+#   
+# } # OCTUBRE 2021
+# 
+# 
+# {
+#   ############################################ NOVIEMBRE 2021 ####################################################
+#   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
+#   
+#   setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2021")
+#   
+#   
+#   
+#   a<-read_xlsx("B-2401-no2021.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
+#   
+#   a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
+#   
+#   options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
+#   #View(a)
+#   names(a)
+#   
+#   names(a)[10] #seleccionamos el valor 10
+#   a<-a[,-10] # quitamos la columna 10 #usa dplyr como ejercicio recuerda usar "-" y select
+#   
+#   #names(a)
+#   names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
+#                "Pichincha","BIF","Scotiabank",
+#                "Citibank","Interbank","Mibanco",
+#                "GNB","Falabella","Santander","Ripley","Azteca","ICBC","China","Total Banca Multiple")
+# 
+#   #View(a)
+#   #names(a)
+#   
+#   exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
+#   exc # va a aplicar todo excepto a la primera columna
+#   a[,exc] # ven? no aparece la columns "variables"
+#   a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
+#   a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
+#   a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
+#   #View(a)
+#   
+#   
+#   
+#   a %>% gather() #%>% View() #REUNIR TODAS LAS COLUMNAS EN UNA 1RA UNO DEBAJO DE OTRA
+#   a %>% gather(Bancos) #%>% View() #nombre de la 1ra columna: "Bancos"
+#   a %>% gather(Bancos,valores) #%>% View() #nombre de la 2da columna: "valores"
+#   a %>% gather(Bancos,valores,-variables) #%>% #View() #Agrupar por la observaciones "variables"
+#   
+#   b<-a %>% gather(Bancos,valores,-variables)
+#   b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán columnas)
+#   # según los valores
+#   
+#   
+#   i<-b %>% spread(variables,valores)
+#   i$Periodo= as.Date("2021-11-30")
+#   
+#   
+#   i<-i[order(names(i))]
+#   # Guardando la data en carpeta "dataprocesada"
+#   
+#   setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+#   saveRDS(i,file="no2021.RDS")
+#   
+#   no2021<-i 
+#   #View(no2021)
+#   
+# } # NOVIEMBRE 2021
+# 
+# 
+# {
+#   ############################################ DICIEMBRE 2021 ####################################################
+#   #///////////////////////////////////////////////////////////////////////////////////////////////////////////
+#   
+#   setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/raw data/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros/2021")
+#   
+#   
+#   
+#   a<-read_xlsx("B-2401-di2021.xls",skip = 5) #quitamos 5 espacios (título y 4 1ras filas)
+#   
+#   a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
+#   
+#   options(scipen=999) # para desactivar la nomenclatura cientifica de numeros
+#   #View(a)
+#   names(a)
+#   
+#   names(a)[10] #seleccionamos el valor 10
+#   a<-a[,-10] # quitamos la columna 10 #usa dplyr como ejercicio recuerda usar "-" y select
+#   
+#   #names(a)
+#   names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
+#                "Pichincha","BIF","Scotiabank",
+#                "Citibank","Interbank","Mibanco",
+#                "GNB","Falabella","Santander","Ripley","Azteca","ICBC","China","Total Banca Multiple")
+# 
+#   #View(a)
+#   #names(a)
+#   
+#   exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
+#   exc # va a aplicar todo excepto a la primera columna
+#   a[,exc] # ven? no aparece la columns "variables"
+#   a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numericos y luego pasarlos a numeric recien. Por que? Porque a veces por alguna razon te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
+#   a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numerico
+#   a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
+#   #View(a)
+#   
+#   
+#   
+#   a %>% gather() #%>% View() #REUNIR TODAS LAS COLUMNAS EN UNA 1RA UNO DEBAJO DE OTRA
+#   a %>% gather(Bancos) #%>% View() #nombre de la 1ra columna: "Bancos"
+#   a %>% gather(Bancos,valores) #%>% View() #nombre de la 2da columna: "valores"
+#   a %>% gather(Bancos,valores,-variables) #%>% #View() #Agrupar por la observaciones "variables"
+#   
+#   b<-a %>% gather(Bancos,valores,-variables)
+#   b %>% spread(variables,valores) #%>% View() #Distribuir las variables(serán columnas)
+#   # según los valores
+#   
+#   
+#   i<-b %>% spread(variables,valores)
+#   i$Periodo= as.Date("2021-12-31")
+#   
+#   
+#   i<-i[order(names(i))]
+#   # Guardando la data en carpeta "dataprocesada"
+#   
+#   setwd("C:/Users/Administrator/Documents/GitHub/Sector-Financiero-Peru/data/dataprocesada/Informacion Estadistica de Banca Multiple/Indicadores de las Empresas Bancarias/Indicadores Financieros")
+#   saveRDS(i,file="di2021.RDS")
+#   
+#   di2021<-i 
+#   #View(di2021)
+#   
+# } # DICIEMBRE 2021
